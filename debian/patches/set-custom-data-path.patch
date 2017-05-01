@@ -1,0 +1,12 @@
+Set path for runtime data storage outside of static file directory.
+--- a/rainloop/v/0.0.0/include.php
++++ b/rainloop/v/0.0.0/include.php
+@@ -47,7 +47,7 @@
+ 			define('APP_REPOSITORY_PATH', 'http://repository.rainloop.net/v1/');
+ 			define('APP_REPO_CORE_FILE', 'http://repository.rainloop.net/v2/core.{{channel}}.json');
+ 
+-			$sCustomDataPath = '';
++			$sCustomDataPath = '/var/lib/rainloop';
+ 			$sCustomConfiguration = '';
+ 
+ 			if (file_exists(APP_INDEX_ROOT_PATH.'include.php'))

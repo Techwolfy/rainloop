@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+# Output every command that modifies files on the build system
+export DH_VERBOSE = 1
+
+%:
+	dh $@ 
+
+override_dh_auto_configure:
+	npm install --save-dev
+
+override_dh_auto_build:
+	node_modules/gulp/bin/gulp.js rainloop:start

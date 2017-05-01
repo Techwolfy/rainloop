@@ -1,0 +1,5 @@
+usr/share/rainloop
+var/lib/rainloop
+var/lib/rainloop/_data_/_default_
+etc/rainloop
+etc/rainloop/domains

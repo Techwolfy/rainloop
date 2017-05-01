@@ -1,0 +1,5 @@
+rainloop (1.11.0.205-1) UNRELEASED; urgency=low
+
+  * Initial release (Closes: #861581)
+
+ -- Daniel Ring <dring@wolfishly.me>  Sun, 30 Apr 2017 03:19:32 -0700

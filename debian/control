@@ -1,0 +1,29 @@
+Source: rainloop
+Section: web
+Priority: optional
+Maintainer: Daniel Ring <dring@wolfishly.me>
+Build-Depends:
+ debhelper (>=9),
+ nodejs,
+ npm (>=3)
+Standards-Version: 3.9.8
+Homepage: https://rainloop.net/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/rainloop.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/rainloop.git
+
+Package: rainloop
+Architecture: all
+Depends: ${misc:Depends},
+ php5-fpm (>= 5.4) | libapache2-mod-php5 (>= 5.4),
+ php5-curl,
+ php5-json
+Suggests: php5-sqlite | php5-mysql | php5-pgsql
+Description: Simple, modern & fast web-based email client
+ Rainloop is a PHP-based MUA with a modern interface and no database
+ requirements.
+ .
+ It supports IMAP and SMTP protocols (including SSL), Sieve scripts, multiple
+ accounts and identities, an admin panel for configuration, and integration
+ with a variety of commonly-used services. Plugins can be installed to further
+ extend functionality. Emails are not stored locally, but are accessed through
+ IMAP.
