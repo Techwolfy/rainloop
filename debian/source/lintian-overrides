@@ -1,0 +1,2 @@
+#Base64 embedded image in single line of source file
+rainloop source: source-is-missing dev/Common/Consts.js *

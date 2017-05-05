@@ -1,0 +1,86 @@
+Remove version number from pathnames.
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -478,13 +478,11 @@
+ 	fs.writeFileSync(dist + 'data/VERSION', versionFull);
+ 	fs.writeFileSync(dist + 'data/EMPTY', versionFull);
+ 
+-	fs.writeFileSync(dist + 'index.php', fs.readFileSync('index.php', 'utf8')
++	fs.writeFileSync(dist + 'rainloop/v/' + versionFull + '/index.php', fs.readFileSync('index.php', 'utf8')
+ 		.replace('\'APP_VERSION\', \'0.0.0\'', '\'APP_VERSION\', \'' + versionFull + '\'')
+ 		.replace('\'APP_VERSION_TYPE\', \'source\'', '\'APP_VERSION_TYPE\', \'' + (cfg.community ? 'community' : 'standard') + '\'')
+ 	);
+ 
+-	fs.writeFileSync(dist + 'rainloop/v/' + versionFull + '/index.php.root', fs.readFileSync(dist + 'index.php'));
+-
+ 	if (cfg.community)
+ 	{
+ 		require('rimraf').sync(dist + 'rainloop/v/' + versionFull + '/app/libraries/RainLoop/Providers/Prem.php');
+--- a/rainloop/v/0.0.0/app/libraries/RainLoop/Utils.php
++++ b/rainloop/v/0.0.0/app/libraries/RainLoop/Utils.php
+@@ -630,7 +630,7 @@
+ 	 */
+ 	public static function WebVersionPath()
+ 	{
+-		return self::WebPath().'rainloop/v/'.APP_VERSION.'/';
++		return self::WebPath();
+ 	}
+ 
+ 	/**
+@@ -732,4 +732,4 @@
+ 
+ 		return $mRetVal;
+ 	}
+-}
+\ No newline at end of file
++}
+--- a/rainloop/v/0.0.0/include.php
++++ b/rainloop/v/0.0.0/include.php
+@@ -13,7 +13,7 @@
+ 
+ 			define('APP_START_TIME', time());
+ 			define('APP_REQUEST_RND', md5(APP_START.rand(10000, 99999).APP_START));
+-			define('APP_VERSION_ROOT_PATH', APP_INDEX_ROOT_PATH.'rainloop/v/'.APP_VERSION.'/');
++			define('APP_VERSION_ROOT_PATH', APP_INDEX_ROOT_PATH);
+ 
+ 			define('APP_USE_APC_CACHE', true);
+ 			define('APP_DEFAULT_DENY_ALL_HTACCESS', "Deny from all\n<IfModule mod_autoindex.c>\nOptions -Indexes\n</ifModule>");
+--- a/rainloop/v/0.0.0/index.php.root
++++ /dev/null
+@@ -1,18 +0,0 @@
+-<?php
+-
+-if (!defined('APP_VERSION'))
+-{
+-	define('APP_VERSION', '0.0.0');
+-	define('APP_INDEX_ROOT_FILE', __FILE__);
+-	define('APP_INDEX_ROOT_PATH', str_replace('\\', '/', rtrim(dirname(__FILE__), '\\/').'/'));
+-}
+-
+-if (file_exists(APP_INDEX_ROOT_PATH.'rainloop/v/'.APP_VERSION.'/index.php'))
+-{
+-	return include APP_INDEX_ROOT_PATH.'rainloop/v/'.APP_VERSION.'/index.php';
+-}
+-else
+-{
+-	echo '[105] Missing version directory';
+-	exit(105);
+-}
+--- a/index.php
++++ b/index.php
+@@ -5,12 +5,12 @@
+ 	define('APP_VERSION', '0.0.0');
+ 	define('APP_VERSION_TYPE', 'source');
+ 	define('APP_INDEX_ROOT_FILE', __FILE__);
+-	define('APP_INDEX_ROOT_PATH', str_replace('\\', '/', rtrim(dirname(__FILE__), '\\/').'/'));
++	define('APP_INDEX_ROOT_PATH', '/usr/share/rainloop/');
+ }
+ 
+-if (file_exists(APP_INDEX_ROOT_PATH.'rainloop/v/'.APP_VERSION.'/include.php'))
++if (file_exists(APP_INDEX_ROOT_PATH.'include.php'))
+ {
+-	include APP_INDEX_ROOT_PATH.'rainloop/v/'.APP_VERSION.'/include.php';
++	include APP_INDEX_ROOT_PATH.'include.php';
+ }
+ else
+ {
