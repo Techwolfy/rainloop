@@ -1,2 +1,3 @@
 etc/rainloop/			var/lib/rainloop/_data_/_default_/configs
 etc/rainloop/domains/		var/lib/rainloop/_data_/_default_/domains
+usr/share/php/pclzip.lib.php	usr/share/rainloop/app/libraries/pclzip/pclzip.lib.php

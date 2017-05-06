@@ -10,4 +10,5 @@ override_dh_auto_configure:
 	npm install --save-dev
 
 override_dh_auto_build:
+	rm -rf rainloop/v/0.0.0/app/libraries/pclzip/
 	node_modules/gulp/bin/gulp.js rainloop:start
