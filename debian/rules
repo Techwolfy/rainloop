@@ -13,4 +13,5 @@ override_dh_auto_build:
 	rm -rf rainloop/v/0.0.0/app/libraries/pclzip/
 	rm -rf rainloop/v/0.0.0/app/libraries/GuzzleHttp/
 	rm -rf rainloop/v/0.0.0/app/libraries/phpseclib/
+	rm -rf rainloop/v/0.0.0/app/libraries/Predis/
 	node_modules/gulp/bin/gulp.js rainloop:start
