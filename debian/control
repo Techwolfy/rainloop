@@ -7,8 +7,8 @@ Build-Depends:
  nodejs (>=6) | npm (>=3)
 Standards-Version: 3.9.8
 Homepage: https://rainloop.net/
-#Vcs-Git: git://anonscm.debian.org/collab-maint/rainloop.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/rainloop.git
+Vcs-Git: git://github.com/techwolfy/rainloop-webmail.git
+Vcs-Browser: https://github.com/techwolfy/rainloop-webmail
 
 Package: rainloop
 Architecture: all
