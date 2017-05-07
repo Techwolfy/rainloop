@@ -1,2 +1,12 @@
-#Base64 embedded image in single line of source file
+#Long lines in source files
 rainloop source: source-is-missing dev/Common/Consts.js *
+rainloop source: source-is-missing vendors/jua/jua.js *
+
+#Amalgamated and minified copy of package "ckeditor"; bundled by upstream,
+#package fails to load synchronously unless amalgamated
+rainloop source: source-is-missing vendors/ckeditor/*
+
+#Source provided as vendors/bootstrap/js/bootstrap.orig.js
+rainloop source: source-is-missing vendors/bootstrap/js/bootstrap.min.orig.js *
+rainloop source: source-is-missing vendors/bootstrap/js/old.bootstrap.min.js
+rainloop source: source-is-missing vendors/bootstrap/js/old.bootstrap.min.orig.js *

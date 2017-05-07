@@ -1,4 +1,4 @@
-rainloop (1.11.0.205-1) UNRELEASED; urgency=low
+rainloop (1.11.0.205-1) unstable; urgency=low
 
   * Initial release (Closes: #861581)
 
