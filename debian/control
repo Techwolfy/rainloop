@@ -7,15 +7,15 @@ Build-Depends:
  nodejs (>=6) | npm (>=3)
 Standards-Version: 3.9.8
 Homepage: https://rainloop.net/
-Vcs-Git: git://github.com/techwolfy/rainloop-webmail.git
+Vcs-Git: https://github.com/techwolfy/rainloop-webmail.git
 Vcs-Browser: https://github.com/techwolfy/rainloop-webmail
 
 Package: rainloop
 Architecture: all
 Depends: ${misc:Depends},
- php5-fpm (>= 5.4) | libapache2-mod-php5 (>= 5.4),
- php5-curl,
- php5-json,
+ php-fpm (>= 5.4) | libapache2-mod-php (>= 5.4),
+ php-curl,
+ php-json,
  php-pclzip,
  php-guzzlehttp,
  php-seclib,
