@@ -10,3 +10,7 @@ rainloop source: source-is-missing vendors/ckeditor/*
 rainloop source: source-is-missing vendors/bootstrap/js/bootstrap.min.orig.js *
 rainloop source: source-is-missing vendors/bootstrap/js/old.bootstrap.min.js
 rainloop source: source-is-missing vendors/bootstrap/js/old.bootstrap.min.orig.js *
+
+#Long lines in source files of bundled libraries
+rainloop source: source-is-missing debian/lib/openpgp/openpgp.js *
+rainloop source: source-is-missing debian/lib/openpgp/openpgp.worker.js *

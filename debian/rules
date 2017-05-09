@@ -7,7 +7,7 @@ export DH_VERBOSE = 1
 	dh $@
 
 override_dh_auto_configure:
-	npm install --save-dev
+	npm install --no-optional
 
 override_dh_auto_build:
 	rm -rf rainloop/v/0.0.0/app/libraries/pclzip/

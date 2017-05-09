@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Daniel Ring <dring@wolfishly.me>
 Build-Depends:
  debhelper (>=9),
- nodejs (>=6) | npm (>=3)
+ nodejs
 Standards-Version: 3.9.8
 Homepage: https://rainloop.net/
 Vcs-Git: https://github.com/techwolfy/rainloop-webmail.git

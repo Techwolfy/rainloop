@@ -1,0 +1,203 @@
+Bundled libraries missing from Debian.
+--- a/dev/boot.js
++++ b/dev/boot.js
+@@ -1,8 +1,8 @@
+ 
+ import window from 'window';
+ 
+-import {Promise} from 'es6-promise-polyfill/promise.js';
+-import {progressJs} from '../node_modules/Progress.js/src/progress.js';
++import {Promise} from '../debian/lib/es6-promise-polyfill/promise.js';
++import {progressJs} from '../debian/lib/progressjs/progress.js';
+ 
+ window.Promise = window.Promise || Promise;
+ window.progressJs = window.progressJs || progressJs();
+@@ -21,7 +21,7 @@
+ 	}
+ });
+ 
+-require('json3');
++require('../debian/lib/json3/json3.js');
+ require('../vendors/modernizr/modernizr-custom.js');
+ require('Common/Booter');
+ 
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -188,18 +188,18 @@
+ 	main: {
+ 		name: 'app.css',
+ 		src: [
+-			'node_modules/normalize.css/normalize.css',
++			'debian/lib/normalize/normalize.css',
+ 			'vendors/jquery-ui/css/smoothness/jquery-ui-1.10.3.custom.css',
+ 			'vendors/fontastic/styles.css',
+ 			'vendors/jquery-nanoscroller/nanoscroller.css',
+ 			'vendors/jquery-letterfx/jquery-letterfx.min.css',
+ 			'vendors/inputosaurus/inputosaurus.css',
+ 			'vendors/flags/flags-fixed.css',
+-			'node_modules/opentip/css/opentip.css',
+-			'node_modules/pikaday/css/pikaday.css',
+-			'node_modules/lightgallery/dist/css/lightgallery.min.css',
+-			'node_modules/lightgallery/dist/css/lg-transitions.min.css',
+-			'node_modules/Progress.js/minified/progressjs.min.css',
++			'debian/lib/opentip/opentip.css',
++			'debian/lib/pikaday/pikaday.css',
++			'debian/lib/lightgallery/lightgallery.min.css',
++			'debian/lib/lightgallery/lg-transitions.min.css',
++			'debian/lib/progressjs/progressjs.min.css',
+ 			'dev/Styles/_progressjs.css'
+ 		]
+ 	},
+@@ -215,17 +215,17 @@
+ cfg.paths.js = {
+ 	moment: {
+ 		locales: [
+-			'node_modules/moment/locale/*.js'
++			'debian/lib/moment/locale/*.js'
+ 		]
+ 	},
+ 	libs: {
+ 		name: 'libs.js',
+ 		src: [
+-			'node_modules/jquery/dist/jquery.min.js',
+-			'node_modules/jquery-mousewheel/jquery.mousewheel.js',
+-			'node_modules/jquery-scrollstop/jquery.scrollstop.js',
+-			'node_modules/jquery-lazyload/jquery.lazyload.js ',
+-			'node_modules/jquery.backstretch/jquery.backstretch.min.js',
++			'debian/lib/jquery/jquery.min.js',
++			'debian/lib/jquery-mousewheel/jquery.mousewheel.js',
++			'debian/lib/jquery-scrollstop/jquery.scrollstop.js',
++			'debian/lib/jquery-lazyload/jquery.lazyload.js ',
++			'debian/lib/jquery-backstretch/jquery.backstretch.min.js',
+ 			'vendors/jquery-ui/js/jquery-ui-1.10.3.custom.min.js', // custom
+ 			'vendors/jquery-nanoscroller/jquery.nanoscroller.js', // custom (modified)
+ 			'vendors/jquery-wakeup/jquery.wakeup.js', // no-npm
+@@ -238,23 +238,23 @@
+ 			'vendors/keymaster/keymaster.js', // custom (modified)
+ 			'vendors/qr.js/qr.min.js', // fixed
+ 			'vendors/bootstrap/js/bootstrap.min.js', // fixed
+-			'node_modules/underscore/underscore-min.js',
+-			'node_modules/moment/min/moment.min.js',
+-			'node_modules/knockout/build/output/knockout-latest.js',
+-			'node_modules/knockout-projections/dist/knockout-projections.min.js',
+-			'node_modules/knockout-sortable/build/knockout-sortable.min.js ',
+-			'node_modules/matchmedia-polyfill/matchMedia.js',
+-			'node_modules/matchmedia-polyfill/matchMedia.addListener.js',
+-			'node_modules/simplestatemanager/dist/ssm.min.js',
+-			'node_modules/autolinker/dist/Autolinker.min.js',
+-			'node_modules/opentip/lib/opentip.js',
+-			'node_modules/opentip/lib/adapter-jquery.js',
+-			'node_modules/lightgallery/dist/js/lightgallery.min.js',
+-			'node_modules/lightgallery/dist/js/lg-fullscreen.min.js',
+-			'node_modules/lightgallery/dist/js/lg-thumbnail.min.js',
+-			'node_modules/lightgallery/dist/js/lg-zoom.min.js',
+-			'node_modules/lightgallery/dist/js/lg-autoplay.min.js',
+-			'node_modules/ifvisible.js/src/ifvisible.min.js'
++			'debian/lib/underscore/underscore-min.js',
++			'debian/lib/moment/moment.min.js',
++			'debian/lib/knockout/knockout-latest.js',
++			'debian/lib/knockout-projections/knockout-projections.min.js',
++			'debian/lib/knockout-sortable/knockout-sortable.min.js',
++			'debian/lib/matchmedia-polyfill/matchMedia.js',
++			'debian/lib/matchmedia-polyfill/matchMedia.addListener.js',
++			'debian/lib/simplestatemanager/ssm.min.js',
++			'debian/lib/autolinker/Autolinker.min.js',
++			'debian/lib/opentip/opentip.js',
++			'debian/lib/opentip/adapter-jquery.js',
++			'debian/lib/lightgallery/lightgallery.min.js',
++			'debian/lib/lightgallery/lg-fullscreen.min.js',
++			'debian/lib/lightgallery/lg-thumbnail.min.js',
++			'debian/lib/lightgallery/lg-zoom.min.js',
++			'debian/lib/lightgallery/lg-autoplay.min.js',
++			'debian/lib/ifvisible/ifvisible.min.js'
+ 		]
+ 	},
+ 	app: {
+@@ -418,7 +418,7 @@
+ });
+ 
+ gulp.task('lightgallery-fonts:copy', ['lightgallery-fonts:clear'], function() {
+-	return gulp.src('node_modules/lightgallery/dist/fonts/lg.*')
++	return gulp.src('debian/lib/lightgallery/fonts/lg.*')
+ 		.pipe(gulp.dest('rainloop/v/' + cfg.devVersion + '/static/css/fonts'));
+ });
+ 
+--- a/package.json
++++ b/package.json
+@@ -53,8 +53,6 @@
+     "firefox esr"
+   ],
+   "devDependencies": {
+-    "Progress.js": "github:usablica/progress.js#v0.1.0",
+-    "autolinker": "1.4.3",
+     "babel-core": "6.24.1",
+     "babel-eslint": "7.2.3",
+     "babel-loader": "7.0.0",
+@@ -63,9 +61,7 @@
+     "babel-preset-env": "1.4.0",
+     "babel-preset-stage-0": "6.24.1",
+     "babel-runtime": "6.23.0",
+-    "classnames": "2.2.5",
+     "copy-webpack-plugin": "4.0.1",
+-    "es6-promise-polyfill": "1.2.0",
+     "eslint": "3.19.0",
+     "eslint-plugin-compat": "1.0.2",
+     "gulp": "3.9.1",
+@@ -92,34 +88,13 @@
+     "gulp-uglify": "2.1.2",
+     "gulp-util": "3.0.8",
+     "gulp-zip": "4.0.0",
+-    "ifvisible.js": "1.0.6",
+-    "jquery": "2.2.4",
+-    "jquery-lazyload": "1.9.7",
+-    "jquery-mousewheel": "3.1.13",
+-    "jquery-scrollstop": "1.2.0",
+-    "jquery.backstretch": "2.1.15",
+-    "js-cookie": "2.1.4",
+     "json-loader": "0.5.4",
+-    "json3": "3.3.2",
+-    "knockout": "3.4.2",
+-    "knockout-projections": "github:stevesanderson/knockout-projections#v1.1.0",
+-    "knockout-sortable": "0.14.1",
+-    "lightgallery": "1.2.21",
+-    "matchmedia-polyfill": "0.3.0",
+-    "moment": "2.18.1",
+     "node-fs": "0.1.7",
+     "node-notifier": "5.1.2",
+-    "normalize.css": "6.0.0",
+-    "openpgp": "2.5.4",
+-    "opentip": "2.4.3",
+-    "pikaday": "1.5.1",
+     "raw-loader": "0.5.1",
+-    "rifraf": "2.0.3",
+     "rimraf": "2.6.1",
+     "run-sequence": "1.2.2",
+-    "simplestatemanager": "3.4.0",
+     "style-loader": "0.16.1",
+-    "underscore": "1.8.3",
+     "webpack": "2.4.1",
+     "webpack-notifier": "1.5.0"
+   }
+--- a/webpack.config.builder.js
++++ b/webpack.config.builder.js
+@@ -31,14 +31,17 @@
+ 			}),
+ 			new WebpackNotifierPlugin(),
+ 			new CopyWebpackPlugin([
+-				{from: 'node_modules/openpgp/dist/openpgp.min.js', to: 'js/min/openpgp.min.js'},
+-				{from: 'node_modules/openpgp/dist/openpgp.worker.min.js', to: 'js/min/openpgp.worker.min.js'}
++				{from: 'debian/lib/openpgp/openpgp.min.js', to: 'js/min/openpgp.min.js'},
++				{from: 'debian/lib/openpgp/openpgp.worker.min.js', to: 'js/min/openpgp.worker.min.js'}
+ 			])
+ 		],
+ 		resolve: {
+ 			modules: [devPath, 'node_modules'],
+ 			extensions: ['.js'],
+ 			alias: {
++				'pikaday$': __dirname + '/debian/lib/pikaday/pikaday.js',
++				'js-cookie$': __dirname + '/debian/lib/js-cookie/js.cookie.js',
++				'classnames$': __dirname + '/debian/lib/classnames/index.js',
+ 				'Opentip$': __dirname  + '/dev/External/Opentip.js',
+ 				'ko$': __dirname  + '/dev/External/ko.js'
+ 			}
+
