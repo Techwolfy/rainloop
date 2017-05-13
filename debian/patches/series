@@ -1,3 +1,4 @@
+debian-nodejs.patch
 bundled-libraries.patch
 disable-version-path.patch
 set-custom-data-path.patch
