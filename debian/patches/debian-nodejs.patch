@@ -1,9 +1,0 @@
-Fix nodejs path for Debian systems.
---- a/node_modules/gulp/bin/gulp.js
-+++ b/node_modules/gulp/bin/gulp.js
-@@ -1,4 +1,4 @@
--#!/usr/bin/env node
-+#!/usr/bin/env nodejs
- 
- 'use strict';
- var gutil = require('gulp-util');

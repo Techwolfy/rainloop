@@ -1,0 +1,43 @@
+Updated source locations for Debian packaged dependencies.
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -215,16 +215,16 @@
+ cfg.paths.js = {
+ 	moment: {
+ 		locales: [
+-			'debian/lib/moment/locale/*.js'
++			'/usr/share/javascript/moment/locale/*.js'
+ 		]
+ 	},
+ 	libs: {
+ 		name: 'libs.js',
+ 		src: [
+-			'debian/lib/jquery/jquery.min.js',
+-			'debian/lib/jquery-mousewheel/jquery.mousewheel.js',
++			'/usr/share/javascript/jquery/jquery.min.js',
++			'/usr/share/javascript/jquery-mousewheel/jquery.mousewheel.js',
+ 			'debian/lib/jquery-scrollstop/jquery.scrollstop.js',
+-			'debian/lib/jquery-lazyload/jquery.lazyload.js ',
++			'/usr/share/javascript/jquery-lazyload/jquery.lazyload.js ',
+ 			'debian/lib/jquery-backstretch/jquery.backstretch.min.js',
+ 			'vendors/jquery-ui/js/jquery-ui-1.10.3.custom.min.js', // custom
+ 			'vendors/jquery-nanoscroller/jquery.nanoscroller.js', // custom (modified)
+@@ -238,8 +238,8 @@
+ 			'vendors/keymaster/keymaster.js', // custom (modified)
+ 			'vendors/qr.js/qr.min.js', // fixed
+ 			'vendors/bootstrap/js/bootstrap.min.js', // fixed
+-			'debian/lib/underscore/underscore-min.js',
+-			'debian/lib/moment/moment.min.js',
++			'/usr/share/javascript/underscore/underscore.min.js',
++			'/usr/share/javascript/moment/moment.min.js',
+ 			'debian/lib/knockout/knockout-latest.js',
+ 			'debian/lib/knockout-projections/knockout-projections.min.js',
+ 			'debian/lib/knockout-sortable/knockout-sortable.min.js',
+@@ -349,6 +349,7 @@
+ 
+ gulp.task('js:libs', function() {
+ 	var src = cfg.paths.js.libs.src;
++	src.forEach(function(p,i,a) {a[i] = path.relative('.', p)});
+ 	return gulp.src(src)
+ 		.pipe(expect.real({errorOnFailure: true}, src))
+ 		.pipe(concat(cfg.paths.js.libs.name, {separator: '\n\n'}))

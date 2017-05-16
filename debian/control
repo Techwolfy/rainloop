@@ -3,8 +3,17 @@ Section: web
 Priority: optional
 Maintainer: Daniel Ring <dring@wolfishly.me>
 Build-Depends:
- debhelper (>=9),
- nodejs
+ debhelper (>= 9),
+ , nodejs (>= 4),
+ , gulp
+ , node-gulp-util
+ , node-mkdirp
+ , node-rimraf
+ , node-json-loader
+ , libjs-jquery-mousewheel
+ , libjs-jquery-lazyload
+ , libjs-moment
+ , libjs-underscore
 Standards-Version: 3.9.8
 Homepage: https://rainloop.net/
 Vcs-Git: https://github.com/techwolfy/rainloop-webmail.git
