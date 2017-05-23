@@ -169,15 +169,85 @@ Simplified build process to reduce dependencies.
  		options: {
  			paths: [
  				path.join(__dirname, 'dev', 'Styles'),
-@@ -221,7 +145,7 @@
+@@ -192,14 +116,14 @@
+ 			'vendors/jquery-ui/css/smoothness/jquery-ui-1.10.3.custom.css',
+ 			'vendors/fontastic/styles.css',
+ 			'vendors/jquery-nanoscroller/nanoscroller.css',
+-			'vendors/jquery-letterfx/jquery-letterfx.min.css',
++			'vendors/jquery-letterfx/jquery-letterfx.css',
+ 			'vendors/inputosaurus/inputosaurus.css',
+ 			'vendors/flags/flags-fixed.css',
+ 			'debian/lib/opentip/opentip.css',
+ 			'debian/lib/pikaday/pikaday.css',
+-			'debian/lib/lightgallery/lightgallery.min.css',
+-			'debian/lib/lightgallery/lg-transitions.min.css',
+-			'debian/lib/progressjs/progressjs.min.css',
++			'debian/lib/lightgallery/lightgallery.css',
++			'debian/lib/lightgallery/lg-transitions.css',
++			'debian/lib/progressjs/progressjs.css',
+ 			'dev/Styles/_progressjs.css'
+ 		]
+ 	},
+@@ -221,40 +145,40 @@
  	libs: {
  		name: 'libs.js',
  		src: [
 -			'/usr/share/javascript/jquery/jquery.min.js',
-+			'debian/lib/jquery/jquery.min.js',
++			'debian/lib/jquery/jquery.js',
  			'/usr/share/javascript/jquery-mousewheel/jquery.mousewheel.js',
  			'debian/lib/jquery-scrollstop/jquery.scrollstop.js',
  			'/usr/share/javascript/jquery-lazyload/jquery.lazyload.js ',
+-			'debian/lib/jquery-backstretch/jquery.backstretch.min.js',
+-			'vendors/jquery-ui/js/jquery-ui-1.10.3.custom.min.js', // custom
++			'debian/lib/jquery-backstretch/jquery.backstretch.js',
++			'vendors/jquery-ui/js/jquery-ui-1.10.3.custom.js', // custom
+ 			'vendors/jquery-nanoscroller/jquery.nanoscroller.js', // custom (modified)
+ 			'vendors/jquery-wakeup/jquery.wakeup.js', // no-npm
+-			'vendors/jquery-letterfx/jquery-letterfx.min.js', // no-npm
++			'vendors/jquery-letterfx/jquery-letterfx.js', // no-npm
+ 			'vendors/inputosaurus/inputosaurus.js', // custom (modified)
+ 			'vendors/routes/signals.min.js', // fixed
+ 			'vendors/routes/hasher.min.js', // fixed
+ 			'vendors/routes/crossroads.min.js', // fixed
+-			'vendors/jua/jua.min.js', // custom
++			'vendors/jua/jua.js', // custom
+ 			'vendors/keymaster/keymaster.js', // custom (modified)
+-			'vendors/qr.js/qr.min.js', // fixed
+-			'vendors/bootstrap/js/bootstrap.min.js', // fixed
+-			'/usr/share/javascript/underscore/underscore.min.js',
+-			'/usr/share/javascript/moment/moment.min.js',
++			'vendors/qr.js/qr.js', // fixed
++			'vendors/bootstrap/js/bootstrap.js', // fixed
++			'/usr/share/javascript/underscore/underscore.js',
++			'/usr/share/javascript/moment/moment.js',
+ 			'debian/lib/knockout/knockout-latest.js',
+-			'debian/lib/knockout-projections/knockout-projections.min.js',
+-			'debian/lib/knockout-sortable/knockout-sortable.min.js',
++			'debian/lib/knockout-projections/knockout-projections.js',
++			'debian/lib/knockout-sortable/knockout-sortable.js',
+ 			'debian/lib/matchmedia-polyfill/matchMedia.js',
+ 			'debian/lib/matchmedia-polyfill/matchMedia.addListener.js',
+-			'debian/lib/simplestatemanager/ssm.min.js',
+-			'debian/lib/autolinker/Autolinker.min.js',
++			'debian/lib/simplestatemanager/ssm.js',
++			'debian/lib/autolinker/Autolinker.js',
+ 			'debian/lib/opentip/opentip.js',
+ 			'debian/lib/opentip/adapter-jquery.js',
+-			'debian/lib/lightgallery/lightgallery.min.js',
+-			'debian/lib/lightgallery/lg-fullscreen.min.js',
+-			'debian/lib/lightgallery/lg-thumbnail.min.js',
+-			'debian/lib/lightgallery/lg-zoom.min.js',
+-			'debian/lib/lightgallery/lg-autoplay.min.js',
+-			'debian/lib/ifvisible/ifvisible.min.js'
++			'debian/lib/lightgallery/lightgallery.js',
++			'debian/lib/lightgallery/lg-fullscreen.js',
++			'debian/lib/lightgallery/lg-thumbnail.js',
++			'debian/lib/lightgallery/lg-zoom.js',
++			'debian/lib/lightgallery/lg-autoplay.js',
++			'debian/lib/ifvisible/ifvisible.js'
+ 		]
+ 	},
+ 	app: {
 @@ -266,7 +190,7 @@
  };
  
