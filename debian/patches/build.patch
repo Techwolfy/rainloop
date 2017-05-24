@@ -118,8 +118,9 @@ Simplified build process to reduce dependencies.
  {
 -	return gulp.src(sDir, {read: false})
 -		.pipe(require('gulp-rimraf')());
--}
--
++	return rimraf.sync(sDir);
+ }
+ 
 -function copyFile(sFile, sNewFile, callback)
 -{
 -	fs.writeFileSync(sNewFile, fs.readFileSync(sFile));
@@ -135,9 +136,8 @@ Simplified build process to reduce dependencies.
 -		}
 -		callback();
 -	});
-+	return rimraf.sync(sDir);
- }
- 
+-}
+-
 -function signFileTask(callback) {
 -	if (argv.sign)
 -	{
@@ -425,7 +425,7 @@ Simplified build process to reduce dependencies.
  	}
  
  	cfg.destPath = cfg.releasesPath + '/webmail/' + versionFull + '/';
-@@ -498,131 +404,22 @@
+@@ -498,131 +404,20 @@
  	cfg.rainloopBuilded = true;
  });
  
@@ -537,9 +537,9 @@ Simplified build process to reduce dependencies.
 -	'rainloop:owncloud:setup', 'rainloop:owncloud:zip', 'rainloop:owncloud:clean', 'rainloop:owncloud:shortname', 'rainloop:owncloud:sign']);
 -
  // default
- gulp.task('default', function(callback) {
- 	runSequence('clean', ['js', 'css', 'vendors'], callback);
- });
+-gulp.task('default', function(callback) {
+-	runSequence('clean', ['js', 'css', 'vendors'], callback);
+-});
 -
 -// watch
 -gulp.task('watch', ['css:main', 'js:validate'], function() {
@@ -559,9 +559,10 @@ Simplified build process to reduce dependencies.
 -
 -gulp.task('b', ['build']);
 -gulp.task('o', ['owncloud']);
++gulp.task('default', ['js', 'css', 'vendors']);
 --- a/package.json
 +++ b/package.json
-@@ -54,48 +54,27 @@
+@@ -54,48 +54,26 @@
    ],
    "devDependencies": {
      "babel-core": "6.24.1",
@@ -604,7 +605,7 @@ Simplified build process to reduce dependencies.
 -    "node-notifier": "5.1.2",
      "raw-loader": "0.5.1",
 -    "rimraf": "2.6.1",
-     "run-sequence": "1.2.2",
+-    "run-sequence": "1.2.2",
      "style-loader": "0.16.1",
 -    "webpack": "2.4.1",
 -    "webpack-notifier": "1.5.0"
