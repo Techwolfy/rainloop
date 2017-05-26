@@ -21,107 +21,6 @@ Bundled libraries missing from Debian.
  require('../vendors/modernizr/modernizr-custom.js');
  require('Common/Booter');
  
---- a/gulpfile.js
-+++ b/gulpfile.js
-@@ -188,18 +188,18 @@
- 	main: {
- 		name: 'app.css',
- 		src: [
--			'node_modules/normalize.css/normalize.css',
-+			'debian/lib/normalize/normalize.css',
- 			'vendors/jquery-ui/css/smoothness/jquery-ui-1.10.3.custom.css',
- 			'vendors/fontastic/styles.css',
- 			'vendors/jquery-nanoscroller/nanoscroller.css',
- 			'vendors/jquery-letterfx/jquery-letterfx.min.css',
- 			'vendors/inputosaurus/inputosaurus.css',
- 			'vendors/flags/flags-fixed.css',
--			'node_modules/opentip/css/opentip.css',
--			'node_modules/pikaday/css/pikaday.css',
--			'node_modules/lightgallery/dist/css/lightgallery.min.css',
--			'node_modules/lightgallery/dist/css/lg-transitions.min.css',
--			'node_modules/Progress.js/minified/progressjs.min.css',
-+			'debian/lib/opentip/opentip.css',
-+			'debian/lib/pikaday/pikaday.css',
-+			'debian/lib/lightgallery/lightgallery.min.css',
-+			'debian/lib/lightgallery/lg-transitions.min.css',
-+			'debian/lib/progressjs/progressjs.min.css',
- 			'dev/Styles/_progressjs.css'
- 		]
- 	},
-@@ -215,17 +215,17 @@
- cfg.paths.js = {
- 	moment: {
- 		locales: [
--			'node_modules/moment/locale/*.js'
-+			'debian/lib/moment/locale/*.js'
- 		]
- 	},
- 	libs: {
- 		name: 'libs.js',
- 		src: [
--			'node_modules/jquery/dist/jquery.min.js',
--			'node_modules/jquery-mousewheel/jquery.mousewheel.js',
--			'node_modules/jquery-scrollstop/jquery.scrollstop.js',
--			'node_modules/jquery-lazyload/jquery.lazyload.js ',
--			'node_modules/jquery.backstretch/jquery.backstretch.min.js',
-+			'debian/lib/jquery/jquery.min.js',
-+			'debian/lib/jquery-mousewheel/jquery.mousewheel.js',
-+			'debian/lib/jquery-scrollstop/jquery.scrollstop.js',
-+			'debian/lib/jquery-lazyload/jquery.lazyload.js ',
-+			'debian/lib/jquery-backstretch/jquery.backstretch.min.js',
- 			'vendors/jquery-ui/js/jquery-ui-1.10.3.custom.min.js', // custom
- 			'vendors/jquery-nanoscroller/jquery.nanoscroller.js', // custom (modified)
- 			'vendors/jquery-wakeup/jquery.wakeup.js', // no-npm
-@@ -238,23 +238,23 @@
- 			'vendors/keymaster/keymaster.js', // custom (modified)
- 			'vendors/qr.js/qr.min.js', // fixed
- 			'vendors/bootstrap/js/bootstrap.min.js', // fixed
--			'node_modules/underscore/underscore-min.js',
--			'node_modules/moment/min/moment.min.js',
--			'node_modules/knockout/build/output/knockout-latest.js',
--			'node_modules/knockout-projections/dist/knockout-projections.min.js',
--			'node_modules/knockout-sortable/build/knockout-sortable.min.js ',
--			'node_modules/matchmedia-polyfill/matchMedia.js',
--			'node_modules/matchmedia-polyfill/matchMedia.addListener.js',
--			'node_modules/simplestatemanager/dist/ssm.min.js',
--			'node_modules/autolinker/dist/Autolinker.min.js',
--			'node_modules/opentip/lib/opentip.js',
--			'node_modules/opentip/lib/adapter-jquery.js',
--			'node_modules/lightgallery/dist/js/lightgallery.min.js',
--			'node_modules/lightgallery/dist/js/lg-fullscreen.min.js',
--			'node_modules/lightgallery/dist/js/lg-thumbnail.min.js',
--			'node_modules/lightgallery/dist/js/lg-zoom.min.js',
--			'node_modules/lightgallery/dist/js/lg-autoplay.min.js',
--			'node_modules/ifvisible.js/src/ifvisible.min.js'
-+			'debian/lib/underscore/underscore-min.js',
-+			'debian/lib/moment/moment.min.js',
-+			'debian/lib/knockout/knockout-latest.js',
-+			'debian/lib/knockout-projections/knockout-projections.min.js',
-+			'debian/lib/knockout-sortable/knockout-sortable.min.js',
-+			'debian/lib/matchmedia-polyfill/matchMedia.js',
-+			'debian/lib/matchmedia-polyfill/matchMedia.addListener.js',
-+			'debian/lib/simplestatemanager/ssm.min.js',
-+			'debian/lib/autolinker/Autolinker.min.js',
-+			'debian/lib/opentip/opentip.js',
-+			'debian/lib/opentip/adapter-jquery.js',
-+			'debian/lib/lightgallery/lightgallery.min.js',
-+			'debian/lib/lightgallery/lg-fullscreen.min.js',
-+			'debian/lib/lightgallery/lg-thumbnail.min.js',
-+			'debian/lib/lightgallery/lg-zoom.min.js',
-+			'debian/lib/lightgallery/lg-autoplay.min.js',
-+			'debian/lib/ifvisible/ifvisible.min.js'
- 		]
- 	},
- 	app: {
-@@ -418,7 +418,7 @@
- });
- 
- gulp.task('lightgallery-fonts:copy', ['lightgallery-fonts:clear'], function() {
--	return gulp.src('node_modules/lightgallery/dist/fonts/lg.*')
-+	return gulp.src('debian/lib/lightgallery/fonts/lg.*')
- 		.pipe(gulp.dest('rainloop/v/' + cfg.devVersion + '/static/css/fonts'));
- });
- 
 --- a/package.json
 +++ b/package.json
 @@ -53,8 +53,6 @@
@@ -186,8 +85,8 @@ Bundled libraries missing from Debian.
  			new CopyWebpackPlugin([
 -				{from: 'node_modules/openpgp/dist/openpgp.min.js', to: 'js/min/openpgp.min.js'},
 -				{from: 'node_modules/openpgp/dist/openpgp.worker.min.js', to: 'js/min/openpgp.worker.min.js'}
-+				{from: 'debian/lib/openpgp/openpgp.min.js', to: 'js/min/openpgp.min.js'},
-+				{from: 'debian/lib/openpgp/openpgp.worker.min.js', to: 'js/min/openpgp.worker.min.js'}
++				{from: 'debian/lib/openpgp/dist/openpgp.min.js', to: 'js/min/openpgp.min.js'},
++				{from: 'debian/lib/openpgp/dist/openpgp.worker.min.js', to: 'js/min/openpgp.worker.min.js'}
  			])
  		],
  		resolve: {
@@ -200,4 +99,3 @@ Bundled libraries missing from Debian.
  				'Opentip$': __dirname  + '/dev/External/Opentip.js',
  				'ko$': __dirname  + '/dev/External/ko.js'
  			}
-

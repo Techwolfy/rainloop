@@ -12,13 +12,12 @@ override_dh_auto_build:
 	rm -rf rainloop/v/0.0.0/app/libraries/phpseclib/
 	rm -rf rainloop/v/0.0.0/app/libraries/Predis/
 	rm -rf rainloop/v/0.0.0/app/libraries/SabreForRainLoop/
-	node_modules/gulp/bin/gulp.js clean
-	node_modules/gulp/bin/gulp.js rainloop:start
+	make -f debian/Makefile
 
 override_dh_fixperms:
 	dh_fixperms
 	chown -R www-data:www-data debian/rainloop/var/lib/rainloop
 
 override_dh_auto_clean:
-	node_modules/gulp/bin/gulp.js clean
+	make -f debian/Makefile clean
 	dh_auto_clean

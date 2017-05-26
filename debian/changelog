@@ -1,9 +1,15 @@
+rainloop (1.11.0.205-4) unstable; urgency=low
+
+  * Switched build system from gulp to make.
+
+ -- Daniel Ring <dring@wolfishly.me>  Fri, 26 May 2017 15:35:14 -0700
+
 rainloop (1.11.0.205-3) unstable; urgency=low
 
   * Minor packaging fixes.
   * Initial work on unbundling build system.
 
- -- Daniel Ring <dring@wolfishly.me>  Mon, 08 May 2017 14:28:58 -0700
+ -- Daniel Ring <dring@wolfishly.me>  Mon, 16 May 2017 09:41:21 -0700
 
 rainloop (1.11.0.205-2) unstable; urgency=low
 

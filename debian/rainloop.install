@@ -1,3 +1,3 @@
-build/dist/releases/webmail/*/src/rainloop/v/*/*	/usr/share/rainloop
-build/dist/releases/webmail/*/src/data/*		/var/lib/rainloop
-debian/conf/application.ini				/etc/rainloop
+build/dist/rainloop/*			/usr/share/rainloop
+build/dist/data/*			/var/lib/rainloop
+debian/conf/application.ini		/etc/rainloop
