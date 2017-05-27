@@ -62,17 +62,16 @@ cssSocialCSS = \
 	vendors/fontastic/styles.css \
 	dev/Styles/_social.css
 
-
-.PHONY: cssMainLess
-cssMainLess: $(cssMainLess)
-	lessc --include-path="dev/Styles/:vendors/bootstrap/less/" $< \
+.PHONY: cssMain
+cssMain: $(cssMainCSS)
+	cat $^ \
 	| node_modules/.bin/postcss --use autoprefixer \
 	| sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" \
 	> rainloop/v/0.0.0/static/css/app.css
 
-.PHONY: cssMain
-cssMain: $(cssMainCSS) | cssMainLess
-	cat $^ \
+.PHONY: cssMainLess
+cssMainLess: $(cssMainLess) | cssMain
+	lessc --include-path="dev/Styles/:vendors/bootstrap/less/" $< \
 	| node_modules/.bin/postcss --use autoprefixer \
 	| sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" \
 	>> rainloop/v/0.0.0/static/css/app.css
@@ -85,7 +84,7 @@ cssSocial: $(cssSocialCSS)
 	> rainloop/v/0.0.0/static/css/social.css
 
 .PHONY: cssMainMin
-cssMainMin: | cssMain
+cssMainMin: | cssMainLess
 	cleancss -o rainloop/v/0.0.0/static/css/app.min.css rainloop/v/0.0.0/static/css/app.css
 
 .PHONY: cssSocialMin
