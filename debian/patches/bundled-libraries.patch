@@ -1,18 +1,19 @@
 Bundled libraries missing from Debian.
 --- a/dev/boot.js
 +++ b/dev/boot.js
-@@ -1,8 +1,8 @@
+@@ -1,10 +1,8 @@
  
  import window from 'window';
  
 -import {Promise} from 'es6-promise-polyfill/promise.js';
 -import {progressJs} from '../node_modules/Progress.js/src/progress.js';
-+import {Promise} from '../debian/lib/es6-promise-polyfill/promise.js';
 +import {progressJs} from '../debian/lib/progressjs/progress.js';
  
- window.Promise = window.Promise || Promise;
+-window.Promise = window.Promise || Promise;
  window.progressJs = window.progressJs || progressJs();
-@@ -21,7 +21,7 @@
+ 
+ window.progressJs.onbeforeend(() => {
+@@ -21,7 +19,7 @@
  	}
  });
  
