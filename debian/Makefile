@@ -64,23 +64,18 @@ cssSocialCSS = \
 
 .PHONY: cssMain
 cssMain: $(cssMainCSS)
-	cat $^ \
-	| node_modules/.bin/postcss --use autoprefixer \
-	| sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" \
+	sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" $^ \
 	> rainloop/v/0.0.0/static/css/app.css
 
 .PHONY: cssMainLess
 cssMainLess: $(cssMainLess) | cssMain
 	lessc --include-path="dev/Styles/:vendors/bootstrap/less/" $< \
-	| node_modules/.bin/postcss --use autoprefixer \
 	| sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" \
 	>> rainloop/v/0.0.0/static/css/app.css
 
 .PHONY: cssSocial
 cssSocial: $(cssSocialCSS)
-	cat $^ \
-	| node_modules/.bin/postcss --use autoprefixer \
-	| sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" \
+	sed "s/\.\.\/(img|images|fonts|svg)\//$1/g" $^ \
 	> rainloop/v/0.0.0/static/css/social.css
 
 .PHONY: cssMainMin

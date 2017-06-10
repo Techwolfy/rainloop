@@ -1,19 +1,4 @@
 Fix name of nodejs binary for Debian systems.
---- a/node_modules/postcss-cli/bin/postcss
-+++ b/node_modules/postcss-cli/bin/postcss
-@@ -1,3 +1,3 @@
--#!/usr/bin/env node
-+#!/usr/bin/env nodejs
- 
- require('../')
---- a/node_modules/uglify-js/bin/uglifyjs
-+++ b/node_modules/uglify-js/bin/uglifyjs
-@@ -1,4 +1,4 @@
--#! /usr/bin/env node
-+#! /usr/bin/env nodejs
- // -*- js -*-
- 
- "use strict";
 --- a/node_modules/webpack/bin/webpack.js
 +++ b/node_modules/webpack/bin/webpack.js
 @@ -1,4 +1,4 @@
