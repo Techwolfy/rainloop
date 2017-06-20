@@ -24,3 +24,10 @@
 /tests/fix.php
 /MULTIPLY
 /include.php
+
+#Debian packaging
+debian/debhelper-build-stamp
+debian/files
+debian/rainloop.debhelper.log
+debian/rainloop.substvars
+debian/rainloop/

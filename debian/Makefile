@@ -206,7 +206,7 @@ vendors: | moment ckeditor ckeditorPlugins fontastic lightgallery openpgp
 
 #Dist
 #Version from package.json
-VERSION = 1.11.0.205
+VERSION = 1.11.1
 
 .PHONY: copy
 copy: | jsMin cssMin vendors
