@@ -8,6 +8,10 @@ Build-Depends:
  , cleancss
  , node-less
  , node-uglify
+ , webpack
+ , node-babel-core
+ , node-babel-runtime
+ , node-babel-loader
  , node-json-loader
  , node-raw-loader
  , node-style-loader
@@ -15,7 +19,7 @@ Build-Depends:
  , libjs-jquery-lazyload
  , libjs-moment
  , libjs-underscore
-Standards-Version: 3.9.8
+Standards-Version: 4.1.0
 Homepage: https://rainloop.net/
 Vcs-Git: https://github.com/techwolfy/rainloop-webmail.git
 Vcs-Browser: https://github.com/techwolfy/rainloop-webmail
