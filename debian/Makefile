@@ -142,7 +142,7 @@ jsLibs: $(jsLibs)
 
 .PHONY: jsWebpack
 jsWebpack:
-	node_modules/.bin/webpack
+	webpack
 
 .PHONY: jsApp
 jsApp: | jsWebpack

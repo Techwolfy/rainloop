@@ -1,7 +1,7 @@
 Simplified build process to reduce dependencies.
 --- a/package.json
 +++ b/package.json
-@@ -53,48 +53,14 @@
+@@ -53,48 +53,12 @@
    ],
    "devDependencies": {
      "babel-core": "6.24.1",
@@ -42,13 +42,12 @@ Simplified build process to reduce dependencies.
 -    "json-loader": "0.5.4",
 -    "node-fs": "0.1.7",
 -    "node-notifier": "5.1.2",
-     "raw-loader": "0.5.1",
+-    "raw-loader": "0.5.1",
 -    "rimraf": "2.6.1",
 -    "run-sequence": "1.2.2",
-     "style-loader": "0.18.0",
--    "webpack": "2.5.1",
+-    "style-loader": "0.18.0",
+     "webpack": "2.5.1",
 -    "webpack-notifier": "1.5.0"
-+    "webpack": "2.5.1"
    }
  }
 --- a/webpack.config.builder.js
@@ -76,3 +75,16 @@ Simplified build process to reduce dependencies.
  		],
  		resolve: {
  			modules: [devPath, 'node_modules'],
+@@ -46,6 +39,12 @@
+ 				'ko$': __dirname  + '/dev/External/ko.js'
+ 			}
+ 		},
++		resolveLoader: {
++			alias: {
++				'raw-loader': '/usr/lib/nodejs/raw-loader',
++				'style-loader': '/usr/lib/nodejs/style-loader'
++			},
++		},
+ 		module: {
+ 			rules: [
+ 				{
