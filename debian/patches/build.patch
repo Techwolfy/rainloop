@@ -1,7 +1,7 @@
 Simplified build process to reduce dependencies.
 --- a/package.json
 +++ b/package.json
-@@ -52,49 +52,9 @@
+@@ -52,49 +52,7 @@
      "firefox esr"
    ],
    "devDependencies": {
@@ -9,7 +9,7 @@ Simplified build process to reduce dependencies.
 -    "babel-eslint": "7.2.3",
 -    "babel-loader": "7.0.0",
      "babel-plugin-transform-decorators-legacy": "1.3.4",
-     "babel-plugin-transform-runtime": "6.23.0",
+-    "babel-plugin-transform-runtime": "6.23.0",
      "babel-preset-env": "1.5.1",
 -    "babel-preset-stage-0": "6.24.1",
 -    "babel-runtime": "6.23.0",
@@ -49,7 +49,6 @@ Simplified build process to reduce dependencies.
 -    "style-loader": "0.18.0",
 -    "webpack": "2.5.1",
 -    "webpack-notifier": "1.5.0"
-+    "babel-preset-stage-0": "6.24.1"
    }
  }
 --- a/webpack.config.builder.js
