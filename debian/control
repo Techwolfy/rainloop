@@ -11,8 +11,10 @@ Build-Depends:
  , webpack
  , node-babel-core
  , node-babel-runtime
+ , node-babel-preset-env
  , node-babel-preset-stage-0
  , node-babel-plugin-transform-runtime
+ , node-babel-plugin-transform-decorators-legacy
  , node-babel-loader
  , node-json-loader
  , node-raw-loader
