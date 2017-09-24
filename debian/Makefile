@@ -216,6 +216,12 @@ copy: | jsMin cssMin vendors
 	cp -r rainloop/v/0.0.0/* build/dist/rainloop
 	find build/dist/rainloop/ -type d -exec chmod 0755 {} +
 	find build/dist/rainloop/ -type f -exec chmod 0644 {} +
+	#Remove libraries already in Debian
+	rm -rf build/dist/rainloop/app/libraries/pclzip/
+	rm -rf build/dist/rainloop/app/libraries/GuzzleHttp/
+	rm -rf build/dist/rainloop/app/libraries/phpseclib/
+	rm -rf build/dist/rainloop/app/libraries/Predis/
+	rm -rf build/dist/rainloop/app/libraries/SabreForRainLoop/
 
 .PHONY: setup
 setup: | copy

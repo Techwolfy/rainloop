@@ -7,11 +7,6 @@ export DH_VERBOSE = 1
 	dh $@
 
 override_dh_auto_build:
-	rm -rf rainloop/v/0.0.0/app/libraries/pclzip/
-	rm -rf rainloop/v/0.0.0/app/libraries/GuzzleHttp/
-	rm -rf rainloop/v/0.0.0/app/libraries/phpseclib/
-	rm -rf rainloop/v/0.0.0/app/libraries/Predis/
-	rm -rf rainloop/v/0.0.0/app/libraries/SabreForRainLoop/
 	make -sf debian/Makefile
 
 override_dh_fixperms:
