@@ -99,7 +99,6 @@ header = "/* RainLoop Webmail (c) RainLoop Team | Licensed under AGPL v3 */"
 jsLibs = \
 	debian/lib/jquery/jquery.js \
 	/usr/share/javascript/jquery-mousewheel/jquery.mousewheel.js \
-	debian/lib/jquery-scrollstop/jquery.scrollstop.js \
 	/usr/share/javascript/jquery-lazyload/jquery.lazyload.js \
 	debian/lib/jquery-backstretch/jquery.backstretch.js \
 	vendors/jquery-ui/js/jquery-ui-1.10.3.custom.js \
@@ -119,8 +118,6 @@ jsLibs = \
 	debian/lib/knockout/knockout-latest.js \
 	debian/lib/knockout-projections/knockout-projections.js \
 	debian/lib/knockout-sortable/knockout-sortable.js \
-	debian/lib/matchmedia-polyfill/matchMedia.js \
-	debian/lib/matchmedia-polyfill/matchMedia.addListener.js \
 	debian/lib/simplestatemanager/ssm.js \
 	debian/lib/autolinker/Autolinker.js \
 	debian/lib/opentip/opentip.js \
