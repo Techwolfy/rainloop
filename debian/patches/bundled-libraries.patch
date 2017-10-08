@@ -13,12 +13,11 @@ Bundled libraries missing from Debian.
  window.progressJs = window.progressJs || progressJs();
  
  window.progressJs.onbeforeend(() => {
-@@ -21,7 +19,7 @@
+@@ -21,7 +19,6 @@
  	}
  });
  
 -require('json3');
-+require('../debian/lib/json3/json3.js');
  require('../vendors/modernizr/modernizr-custom.js');
  require('Common/Booter');
  
