@@ -1,3 +1,9 @@
+rainloop (1.11.1-2) unstable; urgency=medium
+
+  * Completed unbundling of build system.
+
+ -- Daniel Ring <dring@wolfishly.me>  Sun, 08 Oct 2017 21:36:38 -0700
+
 rainloop (1.11.1-1) unstable; urgency=low
 
   * Updated to latest upstream version.

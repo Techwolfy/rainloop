@@ -1,0 +1,6 @@
+#License information included in debian/copyright
+rainloop: extra-license-file usr/share/rainloop/app/libraries/MailSo/LICENSE
+rainloop: extra-license-file usr/share/rainloop/app/libraries/Mobile_Detect/LICENSE.txt
+rainloop: extra-license-file usr/share/rainloop/app/libraries/lessphp/LICENSE
+rainloop: extra-license-file usr/share/rainloop/app/libraries/spyc/COPYING
+rainloop: extra-license-file usr/share/rainloop/app/libraries/tmhOAuth/LICENSE
