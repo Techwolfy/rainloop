@@ -219,6 +219,10 @@ copy: | jsMin cssMin vendors
 	rm -rf build/dist/rainloop/app/libraries/phpseclib/
 	rm -rf build/dist/rainloop/app/libraries/Predis/
 	rm -rf build/dist/rainloop/app/libraries/SabreForRainLoop/
+	#Remove VCS control files for upstream bunded libraries
+	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/.gitignore
+	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/.gitmodules
+	rm -f build/dist/rainloop/static/ckeditor/plugins/quicktable/.gitignore
 
 .PHONY: setup
 setup: | copy
