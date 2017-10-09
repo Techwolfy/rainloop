@@ -14,3 +14,4 @@ rainloop source: source-is-missing vendors/bootstrap/js/old.bootstrap.min.orig.j
 #Long lines in source files of bundled libraries
 rainloop source: source-is-missing debian/lib/openpgp/openpgp.js *
 rainloop source: source-is-missing debian/lib/openpgp/openpgp.worker.js *
+

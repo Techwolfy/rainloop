@@ -4,3 +4,5 @@ rainloop: extra-license-file usr/share/rainloop/app/libraries/Mobile_Detect/LICE
 rainloop: extra-license-file usr/share/rainloop/app/libraries/lessphp/LICENSE
 rainloop: extra-license-file usr/share/rainloop/app/libraries/spyc/COPYING
 rainloop: extra-license-file usr/share/rainloop/app/libraries/tmhOAuth/LICENSE
+rainloop: extra-license-file usr/share/rainloop/static/ckeditor/plugins/base64image/LICENSE.md
+rainloop: extra-license-file usr/share/rainloop/static/ckeditor/plugins/quicktable/LICENSE

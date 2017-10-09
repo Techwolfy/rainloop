@@ -2,6 +2,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: rainloop
 Source: <https://github.com/rainloop/rainloop-webmail>
 
+
 Files: *
 Copyright: 2012-2017 Timur Usenko <support@rainloop.net>
 License: AGPL-3
@@ -9,6 +10,7 @@ License: AGPL-3
 Files: debian/*
 Copyright: 2017 Daniel Ring <dring@wolfishly.me>
 License: AGPL-3
+
 
 Files: rainloop/v/0.0.0/app/libraries/Facebook/*
 Copyright: 2017 Facebook, Inc.
@@ -45,6 +47,47 @@ License: MIT
 Files: rainloop/v/0.0.0/app/libraries/tmhOAuth/*
 Copyright: 2014 Matt Harris
 License: Apache-2.0
+
+
+Files: vendors/bootstrap/*
+Copyright: 2013 Twitter, Inc.
+License: Apache-2.0
+
+Files: vendors/ckeditor/* vendors/ckeditor-plugins/*
+Copyright: 2003-2017 CKSource - Frederico Knabben
+License: GPL-3
+
+Files: vendors/jquery-letterfix/*
+Copyright: 2014 Jared Anderson, dba tuxsudo.com
+License: MIT
+
+Files: vendors/jquery-nanoscroller/*
+Copyright: 2013 James Florentino
+License: MIT
+
+Files: vendors/jquery-ui/*
+Copyright: 2013 jQuery Foundation and other contributors
+License: MIT
+
+Files: vendors/jquery-wakeup/*
+Copyright: 2013 Paul Okopny <paul.okopny@gmail.com>
+License: ISC
+
+Files: vendors/keymaster/*
+Copyright: 2011-2013 Thomas Fuchs
+License: MIT
+
+Files: vendors/modernizr/*
+Copyright: 2009-2017 Faruk Ates, Paul Irish, Alex Sexton, Ryan Seddon, Patrick Kettner, Stu Cox, Richard Herrera
+License: MIT
+
+Files: vendors/qr.js/*
+Copyright: 2015 Alasdair Mercer
+License: GPL-3
+
+Files: vendors/routes/*
+Copyright: 2012 Miller Medeiros
+License: MIT
 
 
 License: AGPL-3
@@ -813,3 +856,40 @@ License: Apache-2.0
  .
  On Debian systems, the complete text of the Apache License 2.0 can
  be found in "/usr/share/common-licenses/Apache-2.0".
+
+
+License: GPL-3
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
+
+
+License: ISC
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
