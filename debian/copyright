@@ -30,7 +30,7 @@ License: BSD-3-clause
 
 Files: rainloop/v/0.0.0/app/libraries/PHP-OAuth2/*
 Copyright: 2017 Pierrick Charron <pierrick@php.net>
-License: LGPL-2
+License: LGPL-3
 
 Files: rainloop/v/0.0.0/app/libraries/phpseclib/*
 Copyright: 2007-2016 TerraFrost <terrafrost@php.net> and other conributors
@@ -87,6 +87,71 @@ License: GPL-3
 
 Files: vendors/routes/*
 Copyright: 2012 Miller Medeiros
+License: MIT
+
+
+Files: debian/lib/autolinker/*
+Copyright: 2017 Gregory Jacobs <greg@greg-jacobs.com>
+License: MIT
+
+Files: debian/lib/classnames/*
+Copyright: 2016 Jed Watson
+License: MIT
+
+Files: debian/lib/ifvisible/*
+Copyright: 2013 Serkan Yersen
+License: MIT
+
+Files: debian/lib/jquery-backstretch/*
+Copyright: 2013 Scott Robbin
+License: MIT
+
+Files: debian/lib/jquery/*
+Copyright: 2016 jQuery Foundation and other contributors
+License: MIT
+
+Files: debian/lib/js-cookie/*
+Copyright: 2006-2015 Klaus Hartl & Fagner Brack
+License: MIT
+
+Files: debian/lib/knockout/*
+Copyright: 2017 Steven Sanderson, the Knockout.js team, and other contributors
+License: MIT
+
+Files: debian/lib/knockout-projections/*
+Copyright: Microsoft Corporation
+License: Apache-2.0
+
+Files: debian/lib/knockout-sortable/*
+Copyright: 2016 Ryan Niemeyer
+License: MIT
+
+Files: debian/lib/lightgallery/*
+Copyright: 2016 Sachin N.
+License: Apache-2.0
+
+Files: debian/lib/normalize/*
+Copyright: 2017 Nicolas Gallagher
+License: MIT
+
+Files: debian/lib/openpgp/*
+Copyright: 2017 Bart Butler, Tankred Hase, and Thomas Oberndorfer
+License: LGPL-3
+
+Files: debian/lib/opentip/*
+Copyright: 2012 Matias Meno
+License: MIT
+
+Files: debian/lib/pikaday/*
+Copyright: 2014 David Bushell
+License: MIT
+
+Files: debian/lib/progressjs/*
+Copyright: 2013 Afshin Mehrabani
+License: MIT
+
+Files: debian/lib/simplestatemanager/*
+Copyright: 2016 Jonathan Fielding
 License: MIT
 
 
@@ -823,11 +888,11 @@ License: BSD-3-clause
  POSSIBILITY OF SUCH DAMAGE.
 
 
-License: LGPL-2
+License: LGPL-3
  This package is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
+ version 3 of the License, or (at your option) any later version.
  .
  This package is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -838,7 +903,7 @@ License: LGPL-2
  along with this program. If not, see <http://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in "/usr/share/common-licenses/LGPL-2".
+ Public License can be found in "/usr/share/common-licenses/LGPL-3".
 
 
 License: Apache-2.0
