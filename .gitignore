@@ -26,6 +26,7 @@
 /include.php
 
 #Debian packaging
+debian/.debhelper
 debian/debhelper-build-stamp
 debian/files
 debian/rainloop.debhelper.log

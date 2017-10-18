@@ -1,9 +1,0 @@
-./build/dist/rainloop/app
-./build/dist/rainloop/check.php
-./build/dist/rainloop/include.php
-./build/dist/rainloop/index.php
-./build/dist/rainloop/static
-./build/dist/rainloop/themes
-./build/dist/data/EMPTY
-./build/dist/data/VERSION
-./debian/conf/application.ini
