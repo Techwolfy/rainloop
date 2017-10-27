@@ -1,6 +1,5 @@
 /.idea
 /.vscode
-/.pc
 /api.php
 /error.log
 /nbproject
@@ -24,11 +23,3 @@
 /tests/fix.php
 /MULTIPLY
 /include.php
-
-#Debian packaging
-debian/.debhelper
-debian/debhelper-build-stamp
-debian/files
-debian/rainloop.debhelper.log
-debian/rainloop.substvars
-debian/rainloop/

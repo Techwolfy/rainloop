@@ -10,7 +10,6 @@ Build-Depends:
  , node-uglify
  , webpack
  , node-babel-core
- , node-babel-runtime
  , node-babel-preset-env
  , node-babel-preset-stage-0
  , node-babel-plugin-transform-runtime
