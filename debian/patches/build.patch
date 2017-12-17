@@ -10,35 +10,12 @@ Simplified build process to reduce dependencies.
  	loose = true;
  
  process.noDeprecation = true;
-@@ -28,15 +26,10 @@
- 				'process.env': {
- 					NODE_ENV: '"production"'
- 				}
--			}),
--			new WebpackNotifierPlugin(),
--			new CopyWebpackPlugin([
--				{from: 'debian/lib/openpgp/dist/openpgp.min.js', to: 'js/min/openpgp.min.js'},
--				{from: 'debian/lib/openpgp/dist/openpgp.worker.min.js', to: 'js/min/openpgp.worker.min.js'}
--			])
-+			})
- 		],
- 		resolve: {
--			modules: [devPath, 'node_modules'],
-+			modules: [devPath, 'node_modules', '/usr/lib/nodejs'],
- 			extensions: ['.js'],
- 			alias: {
- 				'pikaday$': __dirname + '/debian/lib/pikaday/pikaday.js',
-@@ -46,6 +39,13 @@
- 				'ko$': __dirname  + '/dev/External/ko.js'
- 			}
- 		},
-+		resolveLoader: {
-+			alias: {
-+				'raw-loader': '/usr/lib/nodejs/raw-loader',
-+				'style-loader': '/usr/lib/nodejs/style-loader',
-+				'babel-loader': '/usr/lib/nodejs/babel-loader'
-+			},
-+		},
- 		module: {
- 			rules: [
- 				{
+@@ -54,7 +52,7 @@
+ 					include: [devPath],
+ 					options: {
+ 						cacheDirectory: true,
+-						presets: [['env', {
++						presets: [[{
+ 							loose: loose,
+ 							modules: false,
+ 							targets: {

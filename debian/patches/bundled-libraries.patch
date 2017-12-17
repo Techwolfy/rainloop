@@ -37,9 +37,9 @@ Bundled libraries missing from Debian.
  			modules: [devPath, 'node_modules'],
  			extensions: ['.js'],
  			alias: {
-+				'pikaday$': __dirname + '/debian/lib/pikaday/pikaday.js',
++				'pikaday$': __dirname + '/usr/lib/nodejs/pikaday/pikaday.js',
 +				'js-cookie$': __dirname + '/debian/lib/js-cookie/js.cookie.js',
-+				'classnames$': __dirname + '/debian/lib/classnames/index.js',
++				'classnames$': __dirname + '/usr/lib/nodejs/classnames/index.js',
  				'Opentip$': __dirname  + '/dev/External/Opentip.js',
  				'ko$': __dirname  + '/dev/External/ko.js'
  			}

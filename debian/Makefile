@@ -42,7 +42,7 @@ assets:
 
 #CSS
 cssMainCSS = \
-	debian/lib/normalize/normalize.css \
+	/usr/lib/nodejs/normalize.css/normalize.css \
 	vendors/jquery-ui/css/smoothness/jquery-ui-1.10.3.custom.css \
 	vendors/fontastic/styles.css \
 	vendors/jquery-nanoscroller/nanoscroller.css \
@@ -50,7 +50,7 @@ cssMainCSS = \
 	vendors/inputosaurus/inputosaurus.css \
 	vendors/flags/flags-fixed.css \
 	debian/lib/opentip/opentip.css \
-	debian/lib/pikaday/pikaday.css \
+	/usr/lib/nodejs/pikaday/pikaday.css \
 	debian/lib/lightgallery/lightgallery.css \
 	debian/lib/lightgallery/lg-transitions.css \
 	debian/lib/progressjs/progressjs.css \
@@ -118,8 +118,8 @@ jsLibs = \
 	debian/lib/knockout/knockout-latest.js \
 	debian/lib/knockout-projections/knockout-projections.js \
 	debian/lib/knockout-sortable/knockout-sortable.js \
-	debian/lib/simplestatemanager/ssm.js \
-	debian/lib/autolinker/Autolinker.js \
+	/usr/lib/nodejs/simplestatemanager/ssm.min.js \
+	/usr/lib/nodejs/autolinker/Autolinker.min.js \
 	debian/lib/opentip/opentip.js \
 	debian/lib/opentip/adapter-jquery.js \
 	debian/lib/lightgallery/lightgallery.js \
@@ -127,7 +127,7 @@ jsLibs = \
 	debian/lib/lightgallery/lg-thumbnail.js \
 	debian/lib/lightgallery/lg-zoom.js \
 	debian/lib/lightgallery/lg-autoplay.js \
-	debian/lib/ifvisible/ifvisible.js
+	/usr/lib/nodejs/ifvisible/ifvisible.js
 
 .PHONY: jsLibs
 jsLibs: $(jsLibs)

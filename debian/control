@@ -18,11 +18,16 @@ Build-Depends:
  , node-json-loader
  , node-raw-loader
  , node-style-loader
+ , node-autolinker
+ , node-classnames
+ , node-normalize.css
+ , node-pikaday
+ , node-simplestatemanager
  , libjs-jquery-mousewheel
  , libjs-jquery-lazyload
  , libjs-moment
  , libjs-underscore
-Standards-Version: 4.1.0
+Standards-Version: 4.1.2
 Homepage: https://rainloop.net/
 Vcs-Git: https://github.com/techwolfy/rainloop-webmail.git
 Vcs-Browser: https://github.com/techwolfy/rainloop-webmail

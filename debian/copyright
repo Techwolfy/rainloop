@@ -90,18 +90,6 @@ Copyright: 2012 Miller Medeiros
 License: MIT
 
 
-Files: debian/lib/autolinker/*
-Copyright: 2017 Gregory Jacobs <greg@greg-jacobs.com>
-License: MIT
-
-Files: debian/lib/classnames/*
-Copyright: 2016 Jed Watson
-License: MIT
-
-Files: debian/lib/ifvisible/*
-Copyright: 2013 Serkan Yersen
-License: MIT
-
 Files: debian/lib/jquery-backstretch/*
 Copyright: 2013 Scott Robbin
 License: MIT
@@ -130,10 +118,6 @@ Files: debian/lib/lightgallery/*
 Copyright: 2016 Sachin N.
 License: Apache-2.0
 
-Files: debian/lib/normalize/*
-Copyright: 2017 Nicolas Gallagher
-License: MIT
-
 Files: debian/lib/openpgp/*
 Copyright: 2017 Bart Butler, Tankred Hase, and Thomas Oberndorfer
 License: LGPL-3
@@ -142,16 +126,8 @@ Files: debian/lib/opentip/*
 Copyright: 2012 Matias Meno
 License: MIT
 
-Files: debian/lib/pikaday/*
-Copyright: 2014 David Bushell
-License: MIT
-
 Files: debian/lib/progressjs/*
 Copyright: 2013 Afshin Mehrabani
-License: MIT
-
-Files: debian/lib/simplestatemanager/*
-Copyright: 2016 Jonathan Fielding
 License: MIT
 
 
