@@ -90,16 +90,8 @@ Copyright: 2012 Miller Medeiros
 License: MIT
 
 
-Files: debian/lib/jquery-backstretch/*
-Copyright: 2013 Scott Robbin
-License: MIT
-
 Files: debian/lib/js-cookie/*
 Copyright: 2006-2015 Klaus Hartl & Fagner Brack
-License: MIT
-
-Files: debian/lib/knockout/*
-Copyright: 2017 Steven Sanderson, the Knockout.js team, and other contributors
 License: MIT
 
 Files: debian/lib/knockout-projections/*

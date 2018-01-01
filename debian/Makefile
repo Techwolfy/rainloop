@@ -100,7 +100,7 @@ jsLibs = \
 	/usr/lib/nodejs/jquery/dist/jquery.js \
 	/usr/share/javascript/jquery-mousewheel/jquery.mousewheel.js \
 	/usr/share/javascript/jquery-lazyload/jquery.lazyload.js \
-	debian/lib/jquery-backstretch/jquery.backstretch.js \
+	/usr/share/javascript/jquery-backstretch/jquery.backstretch.js \
 	vendors/jquery-ui/js/jquery-ui-1.10.3.custom.js \
 	vendors/jquery-nanoscroller/jquery.nanoscroller.js \
 	vendors/jquery-wakeup/jquery.wakeup.js \
@@ -115,7 +115,7 @@ jsLibs = \
 	vendors/bootstrap/js/bootstrap.js \
 	/usr/share/javascript/underscore/underscore.js \
 	/usr/share/javascript/moment/moment.js \
-	debian/lib/knockout/knockout-latest.js \
+	/usr/lib/nodejs/knockout/build/output/knockout-latest.js \
 	debian/lib/knockout-projections/knockout-projections.js \
 	debian/lib/knockout-sortable/knockout-sortable.js \
 	/usr/lib/nodejs/simplestatemanager/ssm.min.js \

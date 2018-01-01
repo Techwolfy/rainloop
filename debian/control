@@ -20,10 +20,12 @@ Build-Depends:
  , node-style-loader
  , node-autolinker
  , node-classnames
+ , node-knockout
  , node-normalize.css
  , node-pikaday
  , node-simplestatemanager
  , node-jquery (>= 2.2.4), node-jquery (<< 3.0.0)
+ , libjs-jquery-backstretch
  , libjs-jquery-mousewheel
  , libjs-jquery-lazyload
  , libjs-moment
