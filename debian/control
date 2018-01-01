@@ -23,6 +23,7 @@ Build-Depends:
  , node-normalize.css
  , node-pikaday
  , node-simplestatemanager
+ , node-jquery (>= 2.2.4), node-jquery (<< 3.0.0)
  , libjs-jquery-mousewheel
  , libjs-jquery-lazyload
  , libjs-moment

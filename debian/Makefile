@@ -97,7 +97,7 @@ cssMin: | cssMainMin cssSocialMin
 header = "/* RainLoop Webmail (c) RainLoop Team | Licensed under AGPL v3 */"
 
 jsLibs = \
-	debian/lib/jquery/jquery.js \
+	/usr/lib/nodejs/jquery/dist/jquery.js \
 	/usr/share/javascript/jquery-mousewheel/jquery.mousewheel.js \
 	/usr/share/javascript/jquery-lazyload/jquery.lazyload.js \
 	debian/lib/jquery-backstretch/jquery.backstretch.js \
