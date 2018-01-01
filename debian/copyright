@@ -102,17 +102,9 @@ Files: debian/lib/knockout-sortable/*
 Copyright: 2016 Ryan Niemeyer
 License: MIT
 
-Files: debian/lib/lightgallery/*
-Copyright: 2016 Sachin N.
-License: Apache-2.0
-
 Files: debian/lib/openpgp/*
 Copyright: 2017 Bart Butler, Tankred Hase, and Thomas Oberndorfer
 License: LGPL-3
-
-Files: debian/lib/opentip/*
-Copyright: 2012 Matias Meno
-License: MIT
 
 Files: debian/lib/progressjs/*
 Copyright: 2013 Afshin Mehrabani

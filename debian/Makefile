@@ -49,10 +49,10 @@ cssMainCSS = \
 	vendors/jquery-letterfx/jquery-letterfx.css \
 	vendors/inputosaurus/inputosaurus.css \
 	vendors/flags/flags-fixed.css \
-	debian/lib/opentip/opentip.css \
+	/usr/lib/nodejs/opentip/css/opentip.css \
 	/usr/lib/nodejs/pikaday/pikaday.css \
-	debian/lib/lightgallery/lightgallery.css \
-	debian/lib/lightgallery/lg-transitions.css \
+	/usr/lib/nodejs/lightgallery/dist/css/lightgallery.css \
+	/usr/lib/nodejs/lightgallery/dist/css/lg-transitions.css \
 	debian/lib/progressjs/progressjs.css \
 	dev/Styles/_progressjs.css
 
@@ -120,13 +120,13 @@ jsLibs = \
 	debian/lib/knockout-sortable/knockout-sortable.js \
 	/usr/lib/nodejs/simplestatemanager/ssm.min.js \
 	/usr/lib/nodejs/autolinker/Autolinker.min.js \
-	debian/lib/opentip/opentip.js \
-	debian/lib/opentip/adapter-jquery.js \
-	debian/lib/lightgallery/lightgallery.js \
-	debian/lib/lightgallery/lg-fullscreen.js \
-	debian/lib/lightgallery/lg-thumbnail.js \
-	debian/lib/lightgallery/lg-zoom.js \
-	debian/lib/lightgallery/lg-autoplay.js \
+	/usr/lib/nodejs/opentip/lib/opentip.js \
+	/usr/lib/nodejs/opentip/lib/adapter-jquery.js \
+	/usr/lib/nodejs/lightgallery/dist/js/lightgallery.js \
+	/usr/lib/nodejs/lightgallery/dist/js/lg-fullscreen.js \
+	/usr/lib/nodejs/lightgallery/dist/js/lg-thumbnail.js \
+	/usr/lib/nodejs/lightgallery/dist/js/lg-zoom.js \
+	/usr/lib/nodejs/lightgallery/dist/js/lg-autoplay.js \
 	/usr/lib/nodejs/ifvisible/ifvisible.js
 
 .PHONY: jsLibs
@@ -173,7 +173,7 @@ moment: | clean
 
 .PHONY: lightgallery
 lightgallery: | clean
-	cp debian/lib/lightgallery/fonts/lg.* rainloop/v/0.0.0/static/css/fonts/
+	cp /usr/lib/nodejs/lightgallery/fonts/lg.* rainloop/v/0.0.0/static/css/fonts/
 
 .PHONY: fontastic
 fontastic: | clean

@@ -21,7 +21,9 @@ Build-Depends:
  , node-autolinker
  , node-classnames
  , node-knockout
+ , node-lightgallery
  , node-normalize.css
+ , node-opentip
  , node-pikaday
  , node-simplestatemanager
  , node-jquery (>= 2.2.4), node-jquery (<< 3.0.0)
