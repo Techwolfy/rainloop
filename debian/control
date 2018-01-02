@@ -21,6 +21,8 @@ Build-Depends:
  , node-autolinker
  , node-classnames
  , node-knockout
+ , node-knockout-sortable
+ , node-knockout-transformations
  , node-lightgallery
  , node-normalize.css
  , node-opentip

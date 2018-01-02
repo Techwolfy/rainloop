@@ -94,14 +94,6 @@ Files: debian/lib/js-cookie/*
 Copyright: 2006-2015 Klaus Hartl & Fagner Brack
 License: MIT
 
-Files: debian/lib/knockout-projections/*
-Copyright: Microsoft Corporation
-License: Apache-2.0
-
-Files: debian/lib/knockout-sortable/*
-Copyright: 2016 Ryan Niemeyer
-License: MIT
-
 Files: debian/lib/openpgp/*
 Copyright: 2017 Bart Butler, Tankred Hase, and Thomas Oberndorfer
 License: LGPL-3

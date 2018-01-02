@@ -116,8 +116,8 @@ jsLibs = \
 	/usr/share/javascript/underscore/underscore.js \
 	/usr/share/javascript/moment/moment.js \
 	/usr/lib/nodejs/knockout/build/output/knockout-latest.js \
-	debian/lib/knockout-projections/knockout-projections.js \
-	debian/lib/knockout-sortable/knockout-sortable.js \
+	/usr/lib/nodejs/knockout-transformations/dist/knockout-transformations.js \
+	/usr/lib/nodejs/knockout-sortable/build/knockout-sortable.js \
 	/usr/lib/nodejs/simplestatemanager/ssm.min.js \
 	/usr/lib/nodejs/autolinker/Autolinker.min.js \
 	/usr/lib/nodejs/opentip/lib/opentip.js \
