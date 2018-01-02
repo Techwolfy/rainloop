@@ -53,7 +53,7 @@ cssMainCSS = \
 	/usr/lib/nodejs/pikaday/pikaday.css \
 	/usr/lib/nodejs/lightgallery/dist/css/lightgallery.css \
 	/usr/lib/nodejs/lightgallery/dist/css/lg-transitions.css \
-	debian/lib/progressjs/progressjs.css \
+	/usr/lib/nodejs/progressjs/src/progressjs.css \
 	dev/Styles/_progressjs.css
 
 cssMainLess = dev/Styles/@Main.less

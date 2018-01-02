@@ -7,7 +7,7 @@ Bundled libraries missing from Debian.
  
 -import {Promise} from 'es6-promise-polyfill/promise.js';
 -import {progressJs} from '../node_modules/Progress.js/src/progress.js';
-+import {progressJs} from '../debian/lib/progressjs/progress.js';
++import {progressJs} from '/usr/lib/nodejs/progressjs/src/progress.js';
  
 -window.Promise = window.Promise || Promise;
  window.progressJs = window.progressJs || progressJs();
@@ -38,8 +38,32 @@ Bundled libraries missing from Debian.
  			extensions: ['.js'],
  			alias: {
 +				'pikaday$': __dirname + '/usr/lib/nodejs/pikaday/pikaday.js',
-+				'js-cookie$': __dirname + '/debian/lib/js-cookie/js.cookie.js',
++				'js-cookie$': __dirname + '/usr/lib/nodejs/js-cookie/src/js.cookie.js',
 +				'classnames$': __dirname + '/usr/lib/nodejs/classnames/index.js',
  				'Opentip$': __dirname  + '/dev/External/Opentip.js',
  				'ko$': __dirname  + '/dev/External/ko.js'
  			}
+@@ -47,7 +50,7 @@
+ 			rules: [
+ 				{
+ 					test: /\.js$/,
+-					loader: 'babel-loader',
++					loader: '/usr/lib/nodejs/babel-loader',
+ 					include: [devPath],
+ 					options: {
+ 						cacheDirectory: true,
+@@ -63,12 +66,12 @@
+ 				},
+ 				{
+ 					test: /\.(html|css)$/,
+-					loader: 'raw-loader',
++					loader: '/usr/lib/nodejs/raw-loader',
+ 					include: [devPath]
+ 				},
+ 				{
+ 					test: /\.json$/,
+-					loader: 'json-loader',
++					loader: '/usr/lib/nodejs/json-loader',
+ 					include: [devPath]
+ 				}
+ 			]
