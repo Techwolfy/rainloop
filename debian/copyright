@@ -90,11 +90,6 @@ Copyright: 2012 Miller Medeiros
 License: MIT
 
 
-Files: debian/lib/openpgp/*
-Copyright: 2017 Bart Butler, Tankred Hase, and Thomas Oberndorfer
-License: LGPL-3
-
-
 License: AGPL-3
                      GNU AFFERO GENERAL PUBLIC LICENSE
                         Version 3, 19 November 2007

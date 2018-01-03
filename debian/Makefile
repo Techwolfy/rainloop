@@ -50,7 +50,7 @@ cssMainCSS = \
 	vendors/inputosaurus/inputosaurus.css \
 	vendors/flags/flags-fixed.css \
 	/usr/lib/nodejs/opentip/css/opentip.css \
-	/usr/lib/nodejs/pikaday/pikaday.css \
+	/usr/lib/nodejs/pikaday/css/pikaday.css \
 	/usr/lib/nodejs/lightgallery/dist/css/lightgallery.css \
 	/usr/lib/nodejs/lightgallery/dist/css/lg-transitions.css \
 	/usr/lib/nodejs/progressjs/src/progressjs.css \
@@ -118,8 +118,8 @@ jsLibs = \
 	/usr/lib/nodejs/knockout/build/output/knockout-latest.js \
 	/usr/lib/nodejs/knockout-transformations/dist/knockout-transformations.js \
 	/usr/lib/nodejs/knockout-sortable/build/knockout-sortable.js \
-	/usr/lib/nodejs/simplestatemanager/ssm.min.js \
-	/usr/lib/nodejs/autolinker/Autolinker.min.js \
+	/usr/lib/nodejs/simplestatemanager/dist/ssm.min.js \
+	/usr/lib/nodejs/autolinker/dist/Autolinker.min.js \
 	/usr/lib/nodejs/opentip/lib/opentip.js \
 	/usr/lib/nodejs/opentip/lib/adapter-jquery.js \
 	/usr/lib/nodejs/lightgallery/dist/js/lightgallery.js \
@@ -127,7 +127,7 @@ jsLibs = \
 	/usr/lib/nodejs/lightgallery/dist/js/lg-thumbnail.js \
 	/usr/lib/nodejs/lightgallery/dist/js/lg-zoom.js \
 	/usr/lib/nodejs/lightgallery/dist/js/lg-autoplay.js \
-	/usr/lib/nodejs/ifvisible/ifvisible.js
+	/usr/lib/nodejs/ifvisible.js/ifvisible.js
 
 .PHONY: jsLibs
 jsLibs: $(jsLibs)
@@ -173,16 +173,11 @@ moment: | clean
 
 .PHONY: lightgallery
 lightgallery: | clean
-	cp /usr/lib/nodejs/lightgallery/fonts/lg.* rainloop/v/0.0.0/static/css/fonts/
+	cp /usr/lib/nodejs/lightgallery/dist/fonts/lg.* rainloop/v/0.0.0/static/css/fonts/
 
 .PHONY: fontastic
 fontastic: | clean
 	cp vendors/fontastic/fonts/rainloop.* rainloop/v/0.0.0/static/css/fonts/
-
-.PHONY: openpgp
-openpgp: | clean
-	cp debian/lib/openpgp/openpgp.min.js rainloop/v/0.0.0/static/js/min/
-	cp debian/lib/openpgp/openpgp.worker.min.js rainloop/v/0.0.0/static/js/min/
 
 .PHONY: ckeditor
 ckeditor:
@@ -196,7 +191,7 @@ ckeditorPlugins:
 	cp -r vendors/ckeditor-plugins/* rainloop/v/0.0.0/static/ckeditor/plugins/
 
 .PHONY: vendors
-vendors: | moment ckeditor ckeditorPlugins fontastic lightgallery openpgp
+vendors: | moment ckeditor ckeditorPlugins fontastic lightgallery
 
 
 

@@ -20,6 +20,7 @@ Build-Depends:
  , node-style-loader
  , node-autolinker
  , node-classnames
+ , node-json3
  , node-js-cookie
  , node-knockout
  , node-knockout-sortable
@@ -36,7 +37,7 @@ Build-Depends:
  , libjs-jquery-lazyload
  , libjs-moment
  , libjs-underscore
-Standards-Version: 4.1.2
+Standards-Version: 4.1.3
 Homepage: https://rainloop.net/
 Vcs-Git: https://github.com/techwolfy/rainloop-webmail.git
 Vcs-Browser: https://github.com/techwolfy/rainloop-webmail
