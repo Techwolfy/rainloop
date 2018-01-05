@@ -51,9 +51,7 @@ Depends: ${misc:Depends},
  php-pclzip,
  php-guzzlehttp,
  php-seclib,
- libphp-predis,
- php-sabre-dav,
- php-sabre-vobject
+ libphp-predis
 Suggests: php5-sqlite | php5-mysql | php5-pgsql
 Description: Simple, modern & fast web-based email client
  Rainloop is a PHP-based MUA with a modern interface and no database

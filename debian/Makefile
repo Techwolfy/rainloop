@@ -213,11 +213,18 @@ copy: | jsMin cssMin vendors
 	rm -rf build/dist/rainloop/app/libraries/GuzzleHttp/
 	rm -rf build/dist/rainloop/app/libraries/phpseclib/
 	rm -rf build/dist/rainloop/app/libraries/Predis/
-	rm -rf build/dist/rainloop/app/libraries/SabreForRainLoop/
-	#Remove VCS control files for upstream bunded libraries
+	#Remove VCS control files for upstream bundled libraries
 	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/.gitignore
 	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/.gitmodules
 	rm -f build/dist/rainloop/static/ckeditor/plugins/quicktable/.gitignore
+	#Remove extra license files for upstream bundled libraries
+	rm -f build/dist/rainloop/app/libraries/MailSo/LICENSE
+	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/LICENSE.txt
+	rm -f build/dist/rainloop/app/libraries/lessphp/LICENSE
+	rm -f build/dist/rainloop/app/libraries/spyc/COPYING
+	rm -f build/dist/rainloop/app/libraries/tmhOAuth/LICENSE
+	rm -f build/dist/rainloop/static/ckeditor/plugins/base64image/LICENSE.md
+	rm -f build/dist/rainloop/static/ckeditor/plugins/quicktable/LICENSE
 
 .PHONY: setup
 setup: | copy

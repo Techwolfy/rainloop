@@ -4,7 +4,7 @@ Source: <https://github.com/rainloop/rainloop-webmail>
 
 
 Files: *
-Copyright: 2012-2017 Timur Usenko <support@rainloop.net>
+Copyright: 2012-2018 Timur Usenko <support@rainloop.net>
 License: AGPL-3
 
 Files: debian/*
@@ -16,13 +16,29 @@ Files: rainloop/v/0.0.0/app/libraries/Facebook/*
 Copyright: 2017 Facebook, Inc.
 License: Facebook
 
+Files: rainloop/v/0.0.0/app/libraries/GuzzleHttp/*
+Copyright: 2011-2016 Michael Dowling <mtdowling@gmail.com>
+License: Expat
+
 Files: rainloop/v/0.0.0/app/libraries/Imagine/*
 Copyright: 2017 Bulat Shakirzyanov <mallluhuct@gmail.com>
-License: MIT
+License: Expat
+
+Files: rainloop/v/0.0.0/app/libraries/lessphp/*
+Copyright: 2010 Leaf Corcoran
+License: Expat or GPL-3
+
+Files: rainloop/v/0.0.0/app/libraries/MailSo/*
+Copyright: 2014 Timur Usenko
+License: Expat
 
 Files: rainloop/v/0.0.0/app/libraries/Mobile_Detect/*
 Copyright: 2011-2017 Serban Ghita <serbanghita@gmail.com>, Nick Ilyin and contributors
-License: MIT
+License: Expat
+
+Files: rainloop/v/0.0.0/app/libraries/pclzip/*
+Copyright: 2009 Vincent Blavet
+License: LGPL-2.1
 
 Files: rainloop/v/0.0.0/app/libraries/PHPGangsta/*
 Copyright: 2012-2016 Michael Kliewe and contributors
@@ -34,15 +50,23 @@ License: LGPL-3
 
 Files: rainloop/v/0.0.0/app/libraries/phpseclib/*
 Copyright: 2007-2016 TerraFrost <terrafrost@php.net> and other conributors
-License: MIT
+License: Expat
 
 Files: rainloop/v/0.0.0/app/libraries/PHPThumb/*
 Copyright: 2015 Ian Selby <ianrselby@gmail.com>
-License: MIT
+License: Expat
+
+Files: rainloop/v/0.0.0/app/libraries/Predis/*
+Copyright: 2009-2013 Daniele Alessandri <suppakilla@gmail.com>
+License: Expat
+
+Files: rainloop/v/0.0.0/app/libraries/SabreForRainLoop/*
+Copyright: 2007-2013 fruux GmbH
+License: BSD-3-clause
 
 Files: rainloop/v/0.0.0/app/libraries/spyc/*
 Copyright: 2011-2017 Vladimir Andersen <vlad.andersen@gmail.com>
-License: MIT
+License: Expat
 
 Files: rainloop/v/0.0.0/app/libraries/tmhOAuth/*
 Copyright: 2014 Matt Harris
@@ -57,17 +81,21 @@ Files: vendors/ckeditor/* vendors/ckeditor-plugins/*
 Copyright: 2003-2017 CKSource - Frederico Knabben
 License: GPL-3
 
-Files: vendors/jquery-letterfix/*
+Files: vendors/inputosaurus/*
+Copyright: 2012 Dan Kielp <dan@sproutsocial.com>
+License: Expat
+
+Files: vendors/jquery-letterfx/*
 Copyright: 2014 Jared Anderson, dba tuxsudo.com
-License: MIT
+License: Expat
 
 Files: vendors/jquery-nanoscroller/*
 Copyright: 2013 James Florentino
-License: MIT
+License: Expat
 
 Files: vendors/jquery-ui/*
 Copyright: 2013 jQuery Foundation and other contributors
-License: MIT
+License: Expat
 
 Files: vendors/jquery-wakeup/*
 Copyright: 2013 Paul Okopny <paul.okopny@gmail.com>
@@ -75,11 +103,11 @@ License: ISC
 
 Files: vendors/keymaster/*
 Copyright: 2011-2013 Thomas Fuchs
-License: MIT
+License: Expat
 
 Files: vendors/modernizr/*
 Copyright: 2009-2017 Faruk Ates, Paul Irish, Alex Sexton, Ryan Seddon, Patrick Kettner, Stu Cox, Richard Herrera
-License: MIT
+License: Expat
 
 Files: vendors/qr.js/*
 Copyright: 2015 Alasdair Mercer
@@ -87,7 +115,7 @@ License: GPL-3
 
 Files: vendors/routes/*
 Copyright: 2012 Miller Medeiros
-License: MIT
+License: Expat
 
 
 License: AGPL-3
@@ -774,7 +802,7 @@ License: Facebook
  DEALINGS IN THE SOFTWARE.
 
 
-License: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
@@ -822,6 +850,23 @@ License: BSD-3-clause
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
 
+License: LGPL-2.1
+ FFmpeg is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ FFmpeg is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with FFmpeg; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License can be found in "/usr/share/common-licenses/LGPL-2.1".
 
 License: LGPL-3
  This package is free software; you can redistribute it and/or

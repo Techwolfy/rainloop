@@ -1,12 +1,3 @@
-#License information included in debian/copyright
-rainloop: extra-license-file usr/share/rainloop/app/libraries/MailSo/LICENSE
-rainloop: extra-license-file usr/share/rainloop/app/libraries/Mobile_Detect/LICENSE.txt
-rainloop: extra-license-file usr/share/rainloop/app/libraries/lessphp/LICENSE
-rainloop: extra-license-file usr/share/rainloop/app/libraries/spyc/COPYING
-rainloop: extra-license-file usr/share/rainloop/app/libraries/tmhOAuth/LICENSE
-rainloop: extra-license-file usr/share/rainloop/static/ckeditor/plugins/base64image/LICENSE.md
-rainloop: extra-license-file usr/share/rainloop/static/ckeditor/plugins/quicktable/LICENSE
-
 #Youtube API is dynamically loaded when necessary to display content
 rainloop: privacy-breach-generic usr/share/rainloop/static/js/libs.js *
 rainloop: privacy-breach-generic usr/share/rainloop/static/js/min/libs.min.js *
