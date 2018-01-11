@@ -2,8 +2,8 @@
 rainloop source: source-is-missing dev/Common/Consts.js *
 rainloop source: source-is-missing vendors/jua/jua.js *
 
-#Amalgamated and minified copy of package "ckeditor"; bundled by upstream,
-#package fails to load synchronously unless amalgamated
+#Amalgamated and minified copy of package "ckeditor" bundled by upstream,
+#unused in build
 rainloop source: source-is-missing vendors/ckeditor/*
 
 #Source provided as vendors/bootstrap/js/bootstrap.orig.js

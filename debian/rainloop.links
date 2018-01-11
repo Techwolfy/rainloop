@@ -4,3 +4,4 @@ usr/share/php/pclzip.lib.php	usr/share/rainloop/app/libraries/pclzip/pclzip.lib.
 usr/share/php/GuzzleHttp/	usr/share/rainloop/app/libraries/GuzzleHttp
 usr/share/php/			usr/share/rainloop/app/libraries/phpseclib
 usr/share/php/Predis/		usr/share/rainloop/app/libraries/Predis
+usr/share/javascript/ckeditor	usr/share/rainloop/static/ckeditor

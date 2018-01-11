@@ -26,8 +26,8 @@ clean:
 	#cleanOpenPGP
 	rm -f rainloop/v/0.0.0/static/js/min/openpgp.*
 	#cleanCKEditor
-	rm -rf rainloop/v/0.0.0/static/ckeditor/
-	mkdir rainloop/v/0.0.0/static/ckeditor
+	rm -rf rainloop/v/0.0.0/static/ckeditor-plugins/
+	mkdir rainloop/v/0.0.0/static/ckeditor-plugins
 	#cleanDist
 	rm -rf build/dist/
 
@@ -179,19 +179,13 @@ lightgallery: | clean
 fontastic: | clean
 	cp vendors/fontastic/fonts/rainloop.* rainloop/v/0.0.0/static/css/fonts/
 
-.PHONY: ckeditor
-ckeditor:
-	cp vendors/ckeditor/*.js vendors/ckeditor/*.css rainloop/v/0.0.0/static/ckeditor/
-	cp -r vendors/ckeditor/lang  rainloop/v/0.0.0/static/ckeditor/
-	cp -r vendors/ckeditor/plugins  rainloop/v/0.0.0/static/ckeditor/
-	cp -r vendors/ckeditor/skins  rainloop/v/0.0.0/static/ckeditor/
-
 .PHONY: ckeditorPlugins
 ckeditorPlugins:
-	cp -r vendors/ckeditor-plugins/* rainloop/v/0.0.0/static/ckeditor/plugins/
+	cp -r vendors/ckeditor-plugins/plain rainloop/v/0.0.0/static/ckeditor-plugins/
+	cp -r vendors/ckeditor-plugins/signature rainloop/v/0.0.0/static/ckeditor-plugins/
 
 .PHONY: vendors
-vendors: | moment ckeditor ckeditorPlugins fontastic lightgallery
+vendors: | moment ckeditorPlugins fontastic lightgallery
 
 
 
@@ -216,15 +210,12 @@ copy: | jsMin cssMin vendors
 	#Remove VCS control files for upstream bundled libraries
 	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/.gitignore
 	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/.gitmodules
-	rm -f build/dist/rainloop/static/ckeditor/plugins/quicktable/.gitignore
 	#Remove extra license files for upstream bundled libraries
 	rm -f build/dist/rainloop/app/libraries/MailSo/LICENSE
 	rm -f build/dist/rainloop/app/libraries/Mobile_Detect/LICENSE.txt
 	rm -f build/dist/rainloop/app/libraries/lessphp/LICENSE
 	rm -f build/dist/rainloop/app/libraries/spyc/COPYING
 	rm -f build/dist/rainloop/app/libraries/tmhOAuth/LICENSE
-	rm -f build/dist/rainloop/static/ckeditor/plugins/base64image/LICENSE.md
-	rm -f build/dist/rainloop/static/ckeditor/plugins/quicktable/LICENSE
 
 .PHONY: setup
 setup: | copy

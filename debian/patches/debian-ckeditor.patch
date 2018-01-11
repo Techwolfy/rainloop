@@ -1,0 +1,29 @@
+Add Debian paths for upstream's ckeditor plugins to the load process.
+--- a/dev/Common/HtmlEditor.js
++++ b/dev/Common/HtmlEditor.js
+@@ -258,6 +258,9 @@
+ 						allowSource = !!Settings.appSettingsGet('allowHtmlEditorSourceButton'),
+ 						biti = !!Settings.appSettingsGet('allowHtmlEditorBitiButtons');
+ 
++					window.CKEDITOR.plugins.addExternal('plain', window.location.href.split('#')[0]+'static/ckeditor-plugins/plain/');
++					window.CKEDITOR.plugins.addExternal('signature', window.location.href.split('#')[0]+'static/ckeditor-plugins/signature/');
++
+ 					if ((allowSource || !biti) && !config.toolbarGroups.__cfgInited)
+ 					{
+ 						config.toolbarGroups.__cfgInited = true;
+--- a/dev/Common/Globals.js
++++ b/dev/Common/Globals.js
+@@ -112,11 +112,11 @@
+ 		{name: 'others'}
+ 	],
+ 
+-	'removePlugins': 'liststyle',
++	'removePlugins': 'liststyle,div,elementspath,flash,horizontalrule,iframe,indentblock,justify,newpage,pagebreak,preview,print,resize,smiley,stylescombo,templates',
+ 	'removeButtons': 'Format,Undo,Redo,Cut,Copy,Paste,Anchor,Strike,Subscript,Superscript,Image,SelectAll,Source',
+ 	'removeDialogTabs': 'link:advanced;link:target;image:advanced;images:advanced',
+ 
+-	'extraPlugins': 'plain,signature',
++	'extraPlugins': 'plain,signature,divarea',
+ 
+ 	'allowedContent': true,
+ 	'extraAllowedContent': true,
