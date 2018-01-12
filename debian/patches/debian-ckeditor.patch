@@ -1,10 +1,12 @@
 Add Debian paths for upstream's ckeditor plugins to the load process.
 --- a/dev/Common/HtmlEditor.js
 +++ b/dev/Common/HtmlEditor.js
-@@ -258,6 +258,9 @@
+@@ -258,6 +258,11 @@
  						allowSource = !!Settings.appSettingsGet('allowHtmlEditorSourceButton'),
  						biti = !!Settings.appSettingsGet('allowHtmlEditorBitiButtons');
  
++					config.skin = 'moono-lisa,'+window.location.href.split('#')[0]+'static/ckeditor-plugins/moono-lisa/';
++					window.CKEDITOR.skin.name = 'moono-lisa';
 +					window.CKEDITOR.plugins.addExternal('plain', window.location.href.split('#')[0]+'static/ckeditor-plugins/plain/');
 +					window.CKEDITOR.plugins.addExternal('signature', window.location.href.split('#')[0]+'static/ckeditor-plugins/signature/');
 +

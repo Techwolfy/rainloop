@@ -183,6 +183,7 @@ fontastic: | clean
 ckeditorPlugins:
 	cp -r vendors/ckeditor-plugins/plain rainloop/v/0.0.0/static/ckeditor-plugins/
 	cp -r vendors/ckeditor-plugins/signature rainloop/v/0.0.0/static/ckeditor-plugins/
+	cp -r vendors/ckeditor/skins/moono-lisa rainloop/v/0.0.0/static/ckeditor-plugins/
 
 .PHONY: vendors
 vendors: | moment ckeditorPlugins fontastic lightgallery
