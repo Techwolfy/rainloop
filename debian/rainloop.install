@@ -1,3 +1,4 @@
 build/dist/rainloop/*			/usr/share/rainloop
 build/dist/data/*			/var/lib/rainloop
 debian/conf/application.ini		/etc/rainloop
+debian/conf/domains/localhost.ini	/etc/rainloop/domains

@@ -196,7 +196,7 @@ vendors: | moment ckeditorPlugins fontastic lightgallery
 VERSION = 1.11.1
 
 .PHONY: copy
-copy: | jsMin cssMin vendors
+copy: | assets jsMin cssMin vendors
 	mkdir build/dist/
 	mkdir build/dist/rainloop/
 	mkdir build/dist/data/
