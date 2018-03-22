@@ -46,6 +46,7 @@ Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/rainloop.git
 Package: rainloop
 Architecture: all
 Depends: ${misc:Depends},
+ nginx | apache2 | httpd,
  php-fpm (>= 5.4) | libapache2-mod-php (>= 5.4),
  php-curl,
  php-json,

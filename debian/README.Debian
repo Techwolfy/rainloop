@@ -1,0 +1,61 @@
+
+RainLoop Webmail for Debian
+===========================
+
+Table of Contents:
+1. Nginx Configuration
+2. Apache2 Configuration
+3. Use with Other Webservers
+4. Configuring RainLoop
+5. Upstream Support
+
+
+Nginx Configuration
+-------------------
+The Debian package for RainLoop provides a sample nginx config file in
+`/usr/share/doc/rainloop/rainloop.nginx.conf`. To use it, copy the file to
+`/etc/nginx/sites-available/` and apply any desired modifications. To
+publish the site, add a symlink to the file in `/etc/nginx/sites-enabled/`
+and reload the nginx service.
+
+
+Apache2 Configuration
+--------------------
+The Debian package for RainLoop provides a sample Apache2 config file in
+`/usr/share/doc/rainloop/rainloop.apache.conf`. To use it, copy the file to
+`/etc/apache2/sites-available/` and apply any desired modifications. To
+publish the site, add a symlink to the file in `/etc/apache2/sites-enabled/`
+and reload the apache2 service.
+
+
+Use with Other Webservers
+-------------------------
+To use RainLoop with other web servers, either set the website root to
+`/usr/share/rainloop/` or place a symlink to it in a web-accessible directory.
+The web server must support PHP in order to run RainLoop.
+
+
+Configuring RainLoop
+--------------------
+RainLoop's main config file `/etc/rainloop/application.ini`, and can be
+modified by hand or by a configuration management tool. Configurations for
+individual email domains are located in `/etc/rainloop/domains`; a sample for
+connecting to a local IMAP server is provided in
+`/etc/rainloop/domains/localhost.ini`.
+
+RainLoop provides a web UI for configuration management as well, but it is
+disabled by default in Debian. To enable it, set "allow_admin_panel" to "On"
+in `/etc/rainloop/application.ini`. The default administrator username is
+"admin" with the password "12345"; please change the password before exposing
+the web-based admin panel to the internet. Setting a new password from within
+the admin panel will store the password as a hash instead of plaintext.
+
+
+Upstream Support
+----------------
+The official website for RainLoop is https://www.rainloop.net/. For issues
+with the software, please contact upstream support at "support@rainloop.net"
+or file an issue on GitHub at https://github.com/RainLoop/rainloop-webmail/.
+
+For issues with the Debian packaging of the software, follow the standard
+Debian bug reporting process.
