@@ -11,20 +11,20 @@ Table of Contents:
 
 Nginx Configuration
 -------------------
-The Debian package for RainLoop provides a sample nginx config file in
-`/usr/share/doc/rainloop/rainloop.nginx.conf`. To use it, copy the file to
-`/etc/nginx/sites-available/` and apply any desired modifications. To
-publish the site, add a symlink to the file in `/etc/nginx/sites-enabled/`
-and reload the nginx service.
+The Debian package for RainLoop provides a sample Nginx config file in
+`/usr/share/doc/rainloop/rainloop.nginx.conf`. It is automatically copied
+to `/etc/nginx/sites-available/rainloop` during initial installation. To
+publish the website, edit the copied file as desired, add a symlink to it
+in `/etc/nginx/sites-enabled/`, and reload the nginx service.
 
 
 Apache2 Configuration
 --------------------
 The Debian package for RainLoop provides a sample Apache2 config file in
-`/usr/share/doc/rainloop/rainloop.apache.conf`. To use it, copy the file to
-`/etc/apache2/sites-available/` and apply any desired modifications. To
-publish the site, add a symlink to the file in `/etc/apache2/sites-enabled/`
-and reload the apache2 service.
+`/usr/share/doc/rainloop/rainloop.apache.conf`. It is automatically copied
+to `/etc/apache2/sites-available/rainloop.conf` during initial installation.
+To publish the website, edit the copied file as desired, add a symlink to it
+in `/etc/apache2/sites-enabled/`, and reload the apache2 service.
 
 
 Use with Other Webservers

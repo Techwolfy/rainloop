@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#Copy sample config file for Nginx
+if [ -d /etc/nginx/sites-available/ ]; then
+	if [ ! -f /etc/nginx/sites-available/rainloop ]; then
+		cp /usr/share/doc/rainloop/rainloop.nginx.conf /etc/nginx/sites-available/rainloop
+	fi
+fi
+
+#Copy sample config file for Apache2
+if [ -d /etc/apache2/sites-available/ ]; then
+	if [ ! -f /etc/apache2/sites-available/rainloop.conf ]; then
+		cp /usr/share/doc/rainloop/rainloop.apache.conf /etc/apache2/sites-available/rainloop.conf
+	fi
+fi
+
+#DEBHELPER#
