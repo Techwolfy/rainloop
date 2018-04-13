@@ -1,37 +1,5 @@
-rainloop (1.11.1-2) unstable; urgency=medium
-
-  * Completed unbundling of dependencies.
-
- -- Daniel Ring <dring@wolfishly.me>  Tue, 02 Jan 2018 21:06:16 -0700
-
-rainloop (1.11.1-1) unstable; urgency=low
-
-  * Updated to latest upstream version.
-  * Continued work on unbundling build system.
-
- -- Daniel Ring <dring@wolfishly.me>  Fri, 26 May 2017 15:35:14 -0700
-
-rainloop (1.11.0.205-4) unstable; urgency=low
-
-  * Switched build system from gulp to make.
-
- -- Daniel Ring <dring@wolfishly.me>  Fri, 26 May 2017 15:35:14 -0700
-
-rainloop (1.11.0.205-3) unstable; urgency=low
-
-  * Minor packaging fixes.
-  * Initial work on unbundling build system.
-
- -- Daniel Ring <dring@wolfishly.me>  Mon, 16 May 2017 09:41:21 -0700
-
-rainloop (1.11.0.205-2) unstable; urgency=low
-
-  * Packaging fixes from initial review.
-
- -- Daniel Ring <dring@wolfishly.me>  Mon, 08 May 2017 14:28:58 -0700
-
-rainloop (1.11.0.205-1) unstable; urgency=low
+rainloop (1.11.1-1) unstable; urgency=medium
 
   * Initial release (Closes: #861581)
 
- -- Daniel Ring <dring@wolfishly.me>  Sun, 30 Apr 2017 03:19:32 -0700
+ -- Daniel Ring <dring@wolfishly.me>  Fri, 13 Apr 2018 02:42:00 -0700
