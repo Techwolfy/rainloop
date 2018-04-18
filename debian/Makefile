@@ -157,7 +157,7 @@ jsAdmin: | jsWebpack
 
 .PHONY: jsMin
 jsMin: | jsApp jsAdmin jsLibs
-	for f in app admin libs; do \
+	for f in app admin libs boot; do \
 		sed "s/rainloop\/v\/([^\/]+)\/static\/js\//rainloop\/v\/$1\/static\/js\/min\//g" rainloop/v/0.0.0/static/js/$$f.js \
 		| uglifyjs --compress --mangle --screw-ie8 -o rainloop/v/0.0.0/static/js/min/$$f.min.js; \
 	done

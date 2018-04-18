@@ -50,10 +50,12 @@ Depends: ${misc:Depends},
  php-fpm (>= 5.4) | libapache2-mod-php (>= 5.4),
  php-curl,
  php-json,
+ php-xml,
  php-pclzip,
  php-guzzlehttp,
  php-seclib,
- libphp-predis
+ libphp-predis,
+ ckeditor
 Suggests: php5-sqlite | php5-mysql | php5-pgsql
 Description: Simple, modern & fast web-based email client
  Rainloop is a PHP-based MUA with a modern interface and no database
